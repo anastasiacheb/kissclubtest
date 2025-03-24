@@ -1,0 +1,839 @@
+<!doctype html>
+<html lang="ru" style="overflow-x: hidden">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="src/css/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <title>Document</title>
+  </head>
+  <body class="overflow-x-hidden font-halvar text-sm font-normal expanded">
+    <nav
+      class="z-50 left-0 right-0 bg-primary lg:flex lg:justify-between lg:py-3 lg:px-5 lg:items-start js_nav fixed top-0">
+      <div class="flex justify-between items-center pt-[14px] pb-4 px-2.5 bg-primary lg:p-0">
+        <div>
+          <img class="w-[120px] h-auto lg:w-auto lg:h-10" src="public/icons/Group_475.svg" alt="лого" />
+        </div>
+        <button aria-label="открыть мобильное меню" class="cursor-pointer js_nav_open_btn lg:hidden">
+          <img class="w-[30px] h-[30px]" src="public/icons/Frame_316.svg" alt="меню" />
+        </button>
+      </div>
+      <div
+        class="w-full h-dvh bg-[#151419] opacity-50 absolute top-0 js_nav_overlay scale-0 transition-opacity ease-linear duration-200 lg:hidden"></div>
+      <div
+        class="bg-primary flex flex-col gap-[43px] pt-[14px] absolute top-0 right-0 pl-[30px] max-w-[270px] translate-x-full h-dvh overflow-hidden transition-all ease-linear duration-200 js_nav_mob_menu lg:relative lg:h-auto lg:max-w-fit lg:translate-x-0 lg:pt-0 lg:pl-0">
+        <button aria-label="закрыть мобильное меню" class="cursor-pointer js_nav_close_btn lg:hidden">
+          <img class="w-auto h-[30px]" src="public/icons/Frame_290.svg" alt="меню" />
+        </button>
+        <div class="flex flex-col gap-5 lg:flex-row lg:gap-6 lg:py-4">
+          <div class="flex flex-col">
+            <button
+              class="cursor-pointer font-halvar font-medium text-2xl text-secondary flex gap-2 items-start js_navac_button leading-[0.8] lg:font-normal lg:text-sm">
+              О проекте
+              <img class="js_navac_icon lg:hidden" src="public/icons/Frame_29df0.svg" alt="открыть" />
+            </button>
+            <div
+              class="flex flex-col gap-1.5 max-h-0 overflow-hidden transition-all ease-linear duration-200 js_navac_content">
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary pt-3 js_nav_link text-sm lg:text-[10px] lg:pt-[14px]"
+                href="#"
+                >Визитка</a
+              >
+              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+                >Кому мы <br class="hidden lg:block" />помогаем</a
+              >
+              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+                >Цели/задачи/<br class="hidden lg:block" />миссия</a
+              >
+              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+                >Ценности</a
+              >
+              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+                >Правила</a
+              >
+              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+                >Как помочь?</a
+              >
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px] pb-1 lg:pb-0"
+                href="#"
+                >Юридическая <br class="hidden lg:block" />информация</a
+              >
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <button
+              class="cursor-pointer font-halvar font-medium text-2xl text-secondary flex gap-2 items-start js_navac_button leading-[0.8] lg:font-normal lg:text-sm">
+              Мероприятия
+              <img
+                class="js_navac_icon transition-all ease-linear duration-200 lg:hidden"
+                src="public/icons/Frame_29df0.svg"
+                alt="открыть" />
+            </button>
+            <div
+              class="flex flex-col gap-1.5 max-h-0 overflow-hidden transition-all ease-linear duration-200 js_navac_content">
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link pt-3 text-sm lg:text-[10px] lg:pt-[14px]"
+                href="#"
+                >Поцелуйный бар</a
+              >
+              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+                >Кисскотека</a
+              >
+              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+                >Правила</a
+              >
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link pb-1 text-sm lg:text-[10px] lg:pb-0"
+                href="#"
+                >FAQ</a
+              >
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <button
+              class="cursor-pointer font-halvar font-medium text-2xl text-secondary flex gap-2 items-start js_navac_button leading-[0.8] lg:font-normal lg:text-sm">
+              Тренинги
+              <img
+                class="js_navac_icon transition-all ease-linear duration-200 lg:hidden"
+                src="public/icons/Frame_29df0.svg"
+                alt="открыть" />
+            </button>
+            <div
+              class="flex flex-col gap-1.5 max-h-0 overflow-hidden transition-all ease-linear duration-200 js_navac_content">
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link pt-3 text-sm lg:text-[10px] lg:pt-[14px]"
+                href="#"
+                >Лекции</a
+              >
+              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+                >Мастер-<br class="hidden lg:block" />классы</a
+              >
+              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+                >Социальные <br class="hidden lg:block" />игры</a
+              >
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link pb-1 text-sm lg:text-[10px] lg:pb-0"
+                href="#"
+                >Календарь <br />мероприятий</a
+              >
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <button
+              class="cursor-pointer font-halvar font-medium text-2xl text-secondary flex gap-2 items-start js_navac_button text-left leading-[0.8] lg:font-normal lg:text-sm">
+              Счастливые <br class="lg:hidden" />
+              истории
+              <img
+                class="js_navac_icon transition-all ease-linear duration-200 lg:hidden"
+                src="public/icons/Frame_29df0.svg"
+                alt="открыть" />
+            </button>
+            <div
+              class="flex flex-col gap-1.5 max-h-0 overflow-hidden transition-all ease-linear duration-200 js_navac_content">
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link pt-3 text-sm lg:text-[10px] lg:pt-[14px]"
+                href="#"
+                >Большие интервью</a
+              >
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link pb-1 text-sm lg:text-[10px] lg:pb-0"
+                href="#"
+                >Отзывы участников</a
+              >
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <button
+              class="cursor-pointer font-halvar font-medium text-2xl text-secondary flex gap-2 items-start js_navac_button lg:font-normal lg:text-sm leading-[0.8]">
+              Участникам
+              <img
+                class="js_navac_icon transition-all ease-linear duration-200 lg:hidden"
+                src="public/icons/Frame_29df0.svg"
+                alt="открыть" />
+            </button>
+            <div
+              class="flex flex-col gap-1.5 max-h-0 overflow-hidden transition-all ease-linear duration-200 js_navac_content">
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link pt-3 text-sm lg:text-[10px] lg:pt-[14px]"
+                href="#"
+                >Куда пойти?</a
+              >
+              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+                >Программа <br />
+                лояльности</a
+              >
+              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+                >Вопросы <br class="hidden lg:block" />и ответы</a
+              >
+              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+                >Большие <br class="hidden lg:block" />интервью</a
+              >
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link pb-1 text-sm lg:text-[10px] lg:pb-0"
+                href="#"
+                >Отзывы <br class="hidden lg:block" />участников</a
+              >
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <button
+              class="cursor-pointer font-halvar font-medium text-2xl text-secondary flex gap-2 items-start js_navac_button leading-[0.8] lg:font-normal lg:text-sm">
+              База знаний
+              <img
+                class="js_navac_icon transition-all ease-linear duration-200 lg:hidden"
+                src="public/icons/Frame_29df0.svg"
+                alt="открыть" />
+            </button>
+            <div
+              class="flex flex-col gap-1.5 max-h-0 overflow-hidden transition-all ease-linear duration-200 js_navac_content">
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link pt-3 text-sm lg:text-[10px] lg:pt-[14px]"
+                href="#"
+                >Исследования</a
+              >
+              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+                >Альманах</a
+              >
+              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+                >Полезные статьи</a
+              >
+              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+                >Блог</a
+              >
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link pb-1 text-sm lg:text-[10px] lg:pb-0"
+                href="#"
+                >FAQ</a
+              >
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <a
+              href="#"
+              class="font-halvar font-medium text-2xl text-secondary flex gap-2 leading-[0.8] js_nav_link lg:font-normal lg:text-sm"
+              >Контакты</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <header class="bg-gradient-to-b from-primary to-tertiary">
+      <div
+        class="px-2.5 flex-col gap-[30px] items-center pt-[30px] pb-12 mt-[60px] lg:mt-16 flex lg:relative lg:pt-12 lg:pb-[70px]">
+        <div class="flex justify-between items-center w-full">
+          <p
+            class="text-secondary font-halvar font-bold expanded text-sm leading-[1] lg:absolute lg:top-12 lg:left-2.5 lg:text-base">
+            Ближайшая <br />вечеринка:
+          </p>
+          <p
+            class="text-secondary font-halvar font-bold expanded text-xs border border-secondary rounded-full w-fit py-1.5 px-2 h-6 flex items-center lg:hidden">
+            15 февраля
+          </p>
+          <p
+            class="text-secondary font-halvar font-bold expanded text-xs border border-secondary rounded-full w-fit py-1.5 px-2 h-6 items-center hidden lg:flex lg:text-base lg:absolute lg:top-12 lg:right-2.5">
+            Другие вечеринки
+          </p>
+          <p
+            class="text-secondary font-halvar font-bold expanded text-xs border border-secondary rounded-full w-fit py-1.5 px-2 h-6 items-center hidden lg:flex lg:text-base lg:absolute lg:top-1/2 lg:left-2.5 slanted lg:text-[44px] lg:h-13 lg:w-40 lg:-translate-y-1/2">
+            15.02
+          </p>
+        </div>
+        <img class="w-full max-w-140 lg:w-[46vw] lg:max-w-none" src="public/images/Group_543.svg" alt="банер" />
+        <div class="flex justify-between items-center w-full">
+          <p
+            class="text-secondary font-bold expanded leading-[1] lg:absolute lg:bottom-[70px] lg:left-2.5 lg:font-medium lg:text-xl">
+            Легкий старт для <br />знакомства с <br />нашим комьюнити
+          </p>
+          <button class="flex items-center gap-2 lg:absolute lg:bottom-[70px] lg:right-2.5">
+            <span class="text-secondary font-bold expanded text-[40px] leading-[0.9] hidden lg:block text-left"
+              >Узнать <br />больше</span
+            ><img class="w-[30px] h-[30px] lg:w-12.5 lg:h-12.5" src="public/icons/1arrow.svg" alt="стрелка вниз" />
+          </button>
+        </div>
+        <button
+          class="text-tertiary bg-white text-sm rounded-full px-[15px] flex items-center justify-center leading-[0.8] h-[33px] cursor-pointer font-bold w-fit -mt-1.5 hover:bg-secondary border border-white hover:border-secondary active:bg-transparent active:border-secondary active:text-secondary lg:absolute lg:top-1/2 lg:right-2.5 lg:-translate-y-1/2">
+          Купить билет
+        </button>
+      </div>
+    </header>
+
+    <section
+      class="lg:grid lg:grid-cols-[55%_45%] lg:gap-x-10 bg-secondary px-2.5 pt-10 pb-12 md:pt-17 md:pb-20 md:pl-5 md:pr-[10vw] lg:grid-rows-[auto_auto_auto_1fr]">
+      <h2 class="text-primary font-bold expanded text-[32px] pb-6 md:text-[52px] md:pb-7 leading-[0.9]">
+        Как это <br />проходит?
+      </h2>
+      <p class="lg:pb-4">
+        Поиграть в 101, попробовать кисскарты и с кем-нибудь познакомиться на дейтинге, пройти квесты, потанцевать под
+        зажигательную музыку — вот о чем Кисскотека. Это легкий старт для знакомства с нашим комьюнити.
+      </p>
+      <div class="lg:row-span-4 lg:row-start-1 my-[30px] lg:my-0">
+        <div class="swiper1">
+          <div class="swiper-wrapper relative">
+            <div
+              data-src="public/images/Rectangle 104.webp"
+              class="swiper-slide swiper1-slide aspect-[300/200] md:aspect-[560/328]">
+              <img
+                class="w-full h-full object-cover rounded-[10px]"
+                src="public/images/Rectangle 104.webp"
+                alt="фото" />
+            </div>
+            <div
+              data-src="public/images/Frame_189.webp"
+              class="swiper-slide swiper1-slide aspect-[300/200] md:aspect-[560/328]">
+              <img class="w-full h-full object-cover rounded-[10px]" src="public/images/Frame_189.webp" alt="фото" />
+            </div>
+            <div
+              data-src="public/images/Photo4.webp"
+              class="swiper-slide swiper1-slide aspect-[300/200] md:aspect-[560/328]">
+              <img class="w-full h-full object-cover rounded-[10px]" src="public/images/Photo4.webp" alt="фото" />
+            </div>
+            <div
+              data-src="public/images/Photo3.webp"
+              class="swiper-slide swiper1-slide aspect-[300/200] md:aspect-[560/328]">
+              <img class="w-full h-full object-cover rounded-[10px]" src="public/images/Photo3.webp" alt="фото" />
+            </div>
+            <div
+              data-src="public/images/Rectangle__92.webp"
+              class="swiper-slide swiper1-slide aspect-[300/200] md:aspect-[560/328]">
+              <img
+                class="w-full h-full object-cover rounded-[10px]"
+                src="public/images/Rectangle__92.webp"
+                alt="фото" />
+            </div>
+
+            <button
+              class="swiper-button-prev1 w-6 h-6 bg-white rounded-full flex items-center justify-center md:w-[30px] md:h-[30px] absolute top-1/2 left-2.5 z-40 -translate-y-1/2">
+              <img
+                class="h-[9px] w-auto max-h-none md:h-[11px] rotate-180"
+                src="public/icons/Polygon_1111.svg"
+                alt="стрелка вправо" />
+            </button>
+            <button
+              class="swiper-button-next1 w-6 h-6 bg-white rounded-full flex items-center justify-center md:w-[30px] md:h-[30px] absolute top-1/2 right-2.5 z-40 -translate-y-1/2">
+              <img
+                class="h-[9px] w-auto max-h-none md:h-[11px]"
+                src="public/icons/Polygon_1111.svg"
+                alt="стрелка вправо" />
+            </button>
+          </div>
+
+          <div class="swiper-pagination1 w-full !flex gap-2.5 rounded-sm mt-2.5"></div>
+        </div>
+      </div>
+
+      <p>
+        Наша ключевая ценность. «Нет» — значит «нет», «да» — значит «да». На любое взаимодействие с другим человеком
+        на вечеринке нужно обязательно спрашивать у него разрешение.
+      </p>
+      <div class="pt-9 flex items-center gap-6.5 md:gap-9 lg:self-end">
+        <button
+          class="bg-primary text-secondary font-bold expanded text-base flex items-center justify-center w-35 h-8.5 border border-primary rounded-full hover:bg-white hover:border-white hover:text-primary active:bg-transparent active:border-primary md:w-40 md:h-10 md:text-xl">
+          Хочу
+        </button>
+        <a
+          class="text-primary font-medium text-xs leading-[0.8] flex gap-1.5 items-center lg:flex-row-reverse md:text-base"
+          href="#">
+          <span class="underline"> Фото-отчет <br />с последней <br class="lg:hidden" />вечеринки </span>
+          <img class="w-8.5 h-8.5" src="public/icons/Subtract.svg" alt="иконка" />
+        </a>
+      </div>
+    </section>
+
+    <section class="bg-primary text-secondary py-12 px-2.5 md:pt-[68px] md:pb-20 lg:flex md:gap-[225px]">
+      <div>
+        <h2 class="font-bold text-[32px] leading-[0.9] pb-8 md:text-[52px] md:leading-[0.8]">
+          Наши <br class="hidden md:block" />ценности
+        </h2>
+        <p class="js_acc_text expanded text-white text-base leading-[1.06] hidden lg:block">
+          Наша ключевая ценность. «Нет» — значит «нет», «да» — значит «да». На любое взаимодействие с другим человеком
+          на вечеринке нужно обязательно спрашивать у него разрешение. Получать отказ и отказывать самому — это ок.
+        </p>
+      </div>
+      <div class="flex flex-col gap-1 lg:grid lg:grid-cols-3 lg:w-[50vw] flex-none lg:aspect-[584/330] md:gap-2.5">
+        <div
+          class="bg-accent text-primary rounded-md px-2.5 pt-3 pb-3.5 cursor-pointer js_acc md:px-5 lg:py-2.5 md:rounded-[10px]">
+          <div class="flex justify-between items-center gap-2">
+            <h3 class="font-medium text-sm leading-[1.06] lg:max-w-[148px]">Принцип активного согласия</h3>
+            <div class="relative h-fit lg:hidden">
+              <img
+                class="w-[15px] h-[15px] absolute top-0 left-0 transition-all ease-linear duration-200 js_acc_icon opacity-0"
+                src="public/icons/Frame_2079.svg"
+                alt="плюс" />
+              <img class="w-[15px] h-[15px]" src="public/icons/Frame_207.svg" alt="минус" />
+            </div>
+          </div>
+          <div class="max-h-0 overflow-hidden transition-all ease-linear duration-200 js_acc_content lg:hidden">
+            <p class="expanded text-xs leading-[1.06] text-dark pt-3 pb-0.5 pr-10 js_acc_inner">
+              Наша ключевая ценность. «Нет» — значит «нет», «да» — значит «да». На любое взаимодействие с другим
+              человеком на вечеринке нужно обязательно спрашивать у него разрешение. Получать отказ и отказывать самому
+              — это ок.
+            </p>
+          </div>
+        </div>
+        <div
+          class="bg-secondary text-primary rounded-md px-2.5 pt-3 pb-3.5 cursor-pointer js_acc md:px-5 lg:py-2.5 md:rounded-[10px]">
+          <div class="flex justify-between items-center gap-2">
+            <h3 class="font-medium text-sm leading-[1.06] lg:max-w-[148px]">
+              Фотографируй других только с их разрешения
+            </h3>
+            <div class="relative h-fit lg:hidden">
+              <img
+                class="w-[15px] h-[15px] absolute top-0 left-0 transition-all ease-linear duration-200 js_acc_icon"
+                src="public/icons/Frame_2079.svg"
+                alt="плюс" />
+              <img class="w-[15px] h-[15px]" src="public/icons/Frame_207.svg" alt="минус" />
+            </div>
+          </div>
+          <div class="max-h-0 overflow-hidden transition-all ease-linear duration-200 js_acc_content lg:hidden">
+            <p class="expanded text-xs leading-[1.06] text-dark pt-3 pb-0.5 pr-10 js_acc_inner">
+              111Наша ключевая ценность. «Нет» — значит «нет», «да» — значит «да». На любое взаимодействие с другим
+              человеком на вечеринке нужно обязательно спрашивать у него разрешение. Получать отказ и отказывать самому
+              — это ок.
+            </p>
+          </div>
+        </div>
+        <div
+          class="bg-secondary text-primary rounded-md px-2.5 pt-3 pb-3.5 cursor-pointer js_acc md:px-5 lg:py-2.5 md:rounded-[10px]">
+          <div class="flex justify-between items-center gap-2">
+            <h3 class="font-medium text-sm leading-[1.06] lg:max-w-[148px]">На наших вечеринках нет секса</h3>
+            <div class="relative h-fit lg:hidden">
+              <img
+                class="w-[15px] h-[15px] absolute top-0 left-0 transition-all ease-linear duration-200 js_acc_icon"
+                src="public/icons/Frame_2079.svg"
+                alt="плюс" />
+              <img class="w-[15px] h-[15px]" src="public/icons/Frame_207.svg" alt="минус" />
+            </div>
+          </div>
+          <div class="max-h-0 overflow-hidden transition-all ease-linear duration-200 js_acc_content lg:hidden">
+            <p class="expanded text-xs leading-[1.06] text-dark pt-3 pb-0.5 pr-10 js_acc_inner">
+              222Наша ключевая ценность. «Нет» — значит «нет», «да» — значит «да». На любое взаимодействие с другим
+              человеком на вечеринке нужно обязательно спрашивать у него разрешение. Получать отказ и отказывать самому
+              — это ок.
+            </p>
+          </div>
+        </div>
+        <div
+          class="bg-secondary text-primary rounded-md px-2.5 pt-3 pb-3.5 cursor-pointer js_acc md:px-5 lg:py-2.5 md:rounded-[10px]">
+          <div class="flex justify-between items-center gap-2">
+            <h3 class="font-medium text-sm leading-[1.06] lg:max-w-[148px]">На наших вечеринках нет секса</h3>
+            <div class="relative h-fit lg:hidden">
+              <img
+                class="w-[15px] h-[15px] absolute top-0 left-0 transition-all ease-linear duration-200 js_acc_icon"
+                src="public/icons/Frame_2079.svg"
+                alt="плюс" />
+              <img class="w-[15px] h-[15px]" src="public/icons/Frame_207.svg" alt="минус" />
+            </div>
+          </div>
+          <div class="max-h-0 overflow-hidden transition-all ease-linear duration-200 js_acc_content lg:hidden">
+            <p class="expanded text-xs leading-[1.06] text-dark pt-3 pb-0.5 pr-10 js_acc_inner">
+              333Наша ключевая ценность. «Нет» — значит «нет», «да» — значит «да». На любое взаимодействие с другим
+              человеком на вечеринке нужно обязательно спрашивать у него разрешение. Получать отказ и отказывать самому
+              — это ок.
+            </p>
+          </div>
+        </div>
+        <div
+          class="bg-secondary text-primary rounded-md px-2.5 pt-3 pb-3.5 cursor-pointer js_acc md:px-5 lg:py-2.5 md:rounded-[10px]">
+          <div class="flex justify-between items-center gap-2">
+            <h3 class="font-medium text-sm leading-[1.06] lg:max-w-[148px]">Следи за собой и своим состоянием</h3>
+            <div class="relative h-fit lg:hidden">
+              <img
+                class="w-[15px] h-[15px] absolute top-0 left-0 transition-all ease-linear duration-200 js_acc_icon"
+                src="public/icons/Frame_2079.svg"
+                alt="плюс" />
+              <img class="w-[15px] h-[15px]" src="public/icons/Frame_207.svg" alt="минус" />
+            </div>
+          </div>
+          <div class="max-h-0 overflow-hidden transition-all ease-linear duration-200 js_acc_content lg:hidden">
+            <p class="expanded text-xs leading-[1.06] text-dark pt-3 pb-0.5 pr-10 js_acc_inner">
+              444Наша ключевая ценность. «Нет» — значит «нет», «да» — значит «да». На любое взаимодействие с другим
+              человеком на вечеринке нужно обязательно спрашивать у него разрешение. Получать отказ и отказывать самому
+              — это ок.
+            </p>
+          </div>
+        </div>
+        <div
+          class="bg-secondary text-primary rounded-md px-2.5 pt-3 pb-3.5 cursor-pointer js_acc md:px-5 lg:py-2.5 md:rounded-[10px]">
+          <div class="flex justify-between items-center gap-2">
+            <h3 class="font-medium text-sm leading-[1.06] lg:max-w-[148px]">
+              Фотографируй других только с их разрешения
+            </h3>
+            <div class="relative h-fit lg:hidden">
+              <img
+                class="w-[15px] h-[15px] absolute top-0 left-0 transition-all ease-linear duration-200 js_acc_icon"
+                src="public/icons/Frame_2079.svg"
+                alt="плюс" />
+              <img class="w-[15px] h-[15px]" src="public/icons/Frame_207.svg" alt="минус" />
+            </div>
+          </div>
+          <div class="max-h-0 overflow-hidden transition-all ease-linear duration-200 js_acc_content lg:hidden">
+            <p class="expanded text-xs leading-[1.06] text-dark pt-3 pb-0.5 pr-10 js_acc_inner">
+              555Наша ключевая ценность. «Нет» — значит «нет», «да» — значит «да». На любое взаимодействие с другим
+              человеком на вечеринке нужно обязательно спрашивать у него разрешение. Получать отказ и отказывать самому
+              — это ок.
+            </p>
+          </div>
+        </div>
+        <div
+          class="bg-secondary text-primary rounded-md px-2.5 pt-3 pb-3.5 cursor-pointer js_acc md:px-5 lg:py-2.5 md:rounded-[10px]">
+          <div class="flex justify-between items-center gap-2">
+            <h3 class="font-medium text-sm leading-[1.06] lg:max-w-[148px]">
+              Фотографируй других только с их разрешенияя
+            </h3>
+            <div class="relative h-fit lg:hidden">
+              <img
+                class="w-[15px] h-[15px] absolute top-0 left-0 transition-all ease-linear duration-200 js_acc_icon"
+                src="public/icons/Frame_2079.svg"
+                alt="плюс" />
+              <img class="w-[15px] h-[15px]" src="public/icons/Frame_207.svg" alt="минус" />
+            </div>
+          </div>
+          <div class="max-h-0 overflow-hidden transition-all ease-linear duration-200 js_acc_content lg:hidden">
+            <p class="expanded text-xs leading-[1.06] text-dark pt-3 pb-0.5 pr-10 js_acc_inner">
+              66Наша ключевая ценность. «Нет» — значит «нет», «да» — значит «да». На любое взаимодействие с другим
+              человеком на вечеринке нужно обязательно спрашивать у него разрешение. Получать отказ и отказывать самому
+              — это ок.
+            </p>
+          </div>
+        </div>
+        <div
+          class="bg-secondary text-primary rounded-md px-2.5 pt-3 pb-3.5 cursor-pointer js_acc md:px-5 lg:py-2.5 md:rounded-[10px]">
+          <div class="flex justify-between items-center gap-2">
+            <h3 class="font-medium text-sm leading-[1.06] lg:max-w-[148px]">Принцип активного согласия</h3>
+            <div class="relative h-fit lg:hidden">
+              <img
+                class="w-[15px] h-[15px] absolute top-0 left-0 transition-all ease-linear duration-200 js_acc_icon"
+                src="public/icons/Frame_2079.svg"
+                alt="плюс" />
+              <img class="w-[15px] h-[15px]" src="public/icons/Frame_207.svg" alt="минус" />
+            </div>
+          </div>
+          <div class="max-h-0 overflow-hidden transition-all ease-linear duration-200 js_acc_content lg:hidden">
+            <p class="expanded text-xs leading-[1.06] text-dark pt-3 pb-0.5 pr-10 js_acc_inner">
+              777Наша ключевая ценность. «Нет» — значит «нет», «да» — значит «да». На любое взаимодействие с другим
+              человеком на вечеринке нужно обязательно спрашивать у него разрешение. Получать отказ и отказывать самому
+              — это ок.
+            </p>
+          </div>
+        </div>
+        <div
+          class="bg-secondary text-primary rounded-md px-2.5 pt-3 pb-3.5 cursor-pointer js_acc md:px-5 lg:py-2.5 md:rounded-[10px]">
+          <div class="flex justify-between items-center gap-2">
+            <h3 class="font-medium text-sm leading-[1.06] lg:max-w-[148px]">Следи за собой и своим состоянием</h3>
+            <div class="relative h-fit lg:hidden">
+              <img
+                class="w-[15px] h-[15px] absolute top-0 left-0 transition-all ease-linear duration-200 js_acc_icon"
+                src="public/icons/Frame_2079.svg"
+                alt="плюс" />
+              <img class="w-[15px] h-[15px]" src="public/icons/Frame_207.svg" alt="минус" />
+            </div>
+          </div>
+          <div class="max-h-0 overflow-hidden transition-all ease-linear duration-200 js_acc_content lg:hidden">
+            <p class="expanded text-xs leading-[1.06] text-dark pt-3 pb-0.5 pr-10 js_acc_inner">
+              888Наша ключевая ценность. «Нет» — значит «нет», «да» — значит «да». На любое взаимодействие с другим
+              человеком на вечеринке нужно обязательно спрашивать у него разрешение. Получать отказ и отказывать самому
+              — это ок.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-dark text-secondary px-2.5 py-10 md:pt-[68px] md:pb-20">
+      <h2 class="font-bold expanded text-[32px] leading-[0.9] pb-9 md:text-[52px] lg:text-center">Наши правила</h2>
+      <div class="swiper2">
+        <div class="swiper-wrapper pb-7">
+          <div class="swiper-slide lg:!flex lg:items-center lg:gap-[55px] lg:pl-[18vw] lg:pr-[6vw]">
+            <div class="flex gap-5 lg:gap-[143px]">
+              <div class="w-fit h-fit relative flex-none">
+                <img class="w-10 h-10" src="public/icons/Vector_3.svg" alt="круг" />
+                <p
+                  class="font-bold expanded text-[30px] absolute inset-0 flex items-center justify-center leading-[0.8]">
+                  1
+                </p>
+              </div>
+              <div class="flex flex-col gap-4 md:gap-4.5 pt-2.5">
+                <h3 class="font-bold expanded text-xl leading-[0.9] md:text-[40px]">Активное согласие</h3>
+                <p class="text-white expanded text-xs md:text-base">
+                  Все взаимодействия могут происходить только если все участники согласны, а значит на любое действие
+                  нужно спросить разрешения. «Да» — это да, «нет» — это нет.
+                </p>
+              </div>
+            </div>
+            <img class="w-[68vw] m-auto lg:w-[25vw]" src="public/images/Frame_294.webp" alt="иллюстрация" />
+          </div>
+          <div class="swiper-slide lg:!flex lg:items-center lg:gap-[55px] lg:pl-[18vw] lg:pr-[6vw]">
+            <div class="flex gap-5 lg:gap-[143px]">
+              <div class="w-fit h-fit relative flex-none">
+                <img class="w-10 h-10" src="public/icons/Vector_3.svg" alt="круг" />
+                <p
+                  class="font-bold expanded text-[30px] absolute inset-0 flex items-center justify-center leading-[0.8]">
+                  2
+                </p>
+              </div>
+              <div class="flex flex-col gap-4 md:gap-4.5 pt-2.5">
+                <h3 class="font-bold expanded text-xl leading-[0.9] md:text-[40px]">На наших вечеринках нет секса</h3>
+                <p class="text-white expanded text-xs md:text-base">
+                  Наша ключевая ценность. «Нет» — значит «нет», «да» — значит «да». На любое взаимодействие с другим
+                  человеком на вечеринке нужно обязательно спрашивать у него разрешение. Получать отказ и отказывать
+                  самому — это ок.
+                </p>
+              </div>
+            </div>
+            <img class="w-[40vw] mt-2.5 m-auto lg:w-[20vw]" src="public/images/image_49.webp" alt="иллюстрация" />
+          </div>
+          <div class="swiper-slide lg:!flex lg:items-center lg:gap-[55px] lg:pl-[18vw] lg:pr-[6vw]">
+            <div class="flex gap-5 lg:gap-[143px]">
+              <div class="w-fit h-fit relative flex-none">
+                <img class="w-10 h-10" src="public/icons/Vector_3.svg" alt="круг" />
+                <p
+                  class="font-bold expanded text-[30px] absolute inset-0 flex items-center justify-center leading-[0.8]">
+                  3
+                </p>
+              </div>
+              <div class="flex flex-col gap-4 md:gap-4.5 pt-2.5">
+                <h3 class="font-bold expanded text-xl leading-[0.9] md:text-[40px]">Не прерывай чужой экшен</h3>
+                <p class="text-white expanded text-xs md:text-base">
+                  А если это взаимодействие, к которому ты хотел бы присоединиться — убедись, что все участники не
+                  против
+                </p>
+              </div>
+            </div>
+            <img class="w-[68vw] m-auto lg:w-[25vw]" src="public/images/sticker_1.webp" alt="иллюстрация" />
+          </div>
+        </div>
+        <div class="flex justify-between items-center lg:max-w-[46vw] m-auto">
+          <button
+            class="swiper-button-prev2 flex gap-1.5 items-center text-white text-xs bg-tertiary w-[120px] h-7 justify-center rounded-full md:font-medium md:text-secondary md:w-fit md:h-fit md:bg-transparent">
+            <img class="h-2 w-auto hidden md:block" src="public/icons/Polygon_11.svg" alt="стрелка влево" />
+            <img class="h-2 w-auto md:hidden" src="public/icons/Frame_2394.svg" alt="стрелка влево" />
+            <span class="md:hidden"> назад </span>
+            <span class="hidden md:block underline">Предыдущее правило</span>
+          </button>
+          <button
+            class="swiper-button-next2 flex gap-1.5 items-center text-tertiary text-xs bg-white w-[120px] h-7 justify-center rounded-full md:font-medium md:text-secondary md:w-fit md:h-fit md:bg-transparent">
+            <span class="md:hidden"> дальше </span>
+            <span class="hidden md:block underline">Следующее правило</span>
+            <img class="h-2 w-auto md:hidden" src="public/icons/Frame_293.svg" alt="стрелка вправо" />
+            <img class="h-2 w-auto hidden md:block" src="public/icons/Polygon_111.svg" alt="стрелка вправо" />
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-tertiary text-secondary px-2.5 py-12 flex flex-col gap-8 md:py-17 md:px-5">
+      <h2 class="font-bold text-[32px] leading-[0.8] md:text-center md:text-[52px]">Ближайшие <br />Кисскотеки</h2>
+      <div class="flex flex-col gap-6 md:grid md:grid-cols-2 md:gap-10 lg:max-w-[63vw] lg:m-auto">
+        <div>
+          <h3 class="pb-2 font-bold expanded text-2xl leading-[1] md:text-[28px] md:pb-2.5">15 февраля</h3>
+          <img
+            class="mb-3 rounded-[10px] aspect-[300/174] object-cover md:aspect-[360/200]"
+            src="public/images/Rectangle 104.webp"
+            alt="фото" />
+          <div class="flex justify-between items-center">
+            <p class="font-medium text-xl leading-[1] md:text-xl">4 000 ₽</p>
+            <button
+              class="text-tertiary bg-white text-base rounded-full px-5 flex items-center justify-center leading-[0.8] h-8 cursor-pointer font-bold w-fit hover:bg-secondary border border-white hover:border-secondary active:bg-transparent active:border-white active:text-white">
+              Билеты
+            </button>
+          </div>
+        </div>
+        <div>
+          <h3 class="pb-2 font-bold expanded text-2xl leading-[1] md:text-[28px] md:pb-2.5">23 апреля</h3>
+          <img
+            class="mb-3 rounded-[10px] aspect-[300/174] object-cover md:aspect-[360/200]"
+            src="public/images/Rectangle__92.webp"
+            alt="фото" />
+          <div class="flex justify-between items-center">
+            <p class="font-medium text-xl leading-[1] md:text-xl">1 800 ₽</p>
+            <button
+              class="text-tertiary bg-white text-base rounded-full px-5 flex items-center justify-center leading-[0.8] h-8 cursor-pointer font-bold w-fit hover:bg-secondary border border-white hover:border-secondary active:bg-transparent active:border-white active:text-white">
+              Билеты
+            </button>
+          </div>
+        </div>
+      </div>
+      <button
+        class="w-45 h-10 font-bold text-tertiary text-sm leading-[0.8] bg-accent border border-accent rounded-full flex items-center justify-center hover:bg-white hover:border-white active:bg-transparent active:text-accent active:border-accent m-auto md:mt-3 md:w-60 md:h-12.5 md:text-base">
+        Другие вечеринки
+      </button>
+    </section>
+
+    <section
+      class="bg-secondary text-tertiary px-2.5 py-12 md:px-5 md:py-17 lg:grid lg:grid-cols-[42%_58%] lg:px-[10vw]">
+      <h2 class="font-bold expanded text-[32px] leading-[0.9] md:text-[52px]">Остались <br />вопросы?</h2>
+      <div class="mt-8 mb-10 flex flex-col gap-3 cursor-pointer lg:row-span-2 lg:m-0">
+        <div class="border-b border-tertiary pb-3.5 js_acc2">
+          <div class="flex items-center justify-between">
+            <h3 class="font-bold expanded leading-[1.08] text-base">Где проходят вечеринки</h3>
+            <img
+              class="w-6 h-6 js_acc_icon2 transition-all ease-linear duration-200"
+              src="public/icons/Vector.svg"
+              alt="плюс" />
+          </div>
+          <div class="max-h-0 overflow-hidden js_acc_content2 transition-all ease-linear duration-200">
+            <p class="pt-2 expanded text-xs text-dark md:text-sm md:font-graphik md:max-w-[82%] md:pt-2.5">
+              Наша ключевая ценность. «Нет» — значит «нет», «да» — значит «да». На любое взаимодействие с другим
+              человеком на вечеринке нужно обязательно спрашивать у него разрешение. Получать отказ и отказывать самому
+              — это ок.
+            </p>
+          </div>
+        </div>
+        <div class="border-b border-tertiary pb-3.5 js_acc2">
+          <div class="flex items-center justify-between">
+            <h3 class="font-bold expanded leading-[1.08] text-base">Как попасть на вечеринку?</h3>
+            <img
+              class="w-6 h-6 js_acc_icon2 transition-all ease-linear duration-200"
+              src="public/icons/Vector.svg"
+              alt="плюс" />
+          </div>
+          <div class="max-h-0 overflow-hidden js_acc_content2 transition-all ease-linear duration-200">
+            <p class="pt-2 expanded text-xs text-dark md:text-sm md:font-graphik md:max-w-[82%] md:pt-2.5">
+              Наша ключевая ценность. «Нет» — значит «нет», «да» — значит «да». На любое взаимодействие с другим
+              человеком на вечеринке нужно обязательно спрашивать у него разрешение. Получать отказ и отказывать самому
+              — это ок.
+            </p>
+          </div>
+        </div>
+        <div class="border-b border-tertiary pb-3.5 js_acc2">
+          <div class="flex items-center justify-between">
+            <h3 class="font-bold expanded leading-[1.08] text-base">Есть ли дресс-код?</h3>
+            <img
+              class="w-6 h-6 js_acc_icon2 transition-all ease-linear duration-200"
+              src="public/icons/Vector.svg"
+              alt="плюс" />
+          </div>
+          <div class="max-h-0 overflow-hidden js_acc_content2 transition-all ease-linear duration-200">
+            <p class="pt-2 expanded text-xs text-dark md:text-sm md:font-graphik md:max-w-[82%] md:pt-2.5">
+              Наша ключевая ценность. «Нет» — значит «нет», «да» — значит «да». На любое взаимодействие с другим
+              человеком на вечеринке нужно обязательно спрашивать у него разрешение. Получать отказ и отказывать самому
+              — это ок.
+            </p>
+          </div>
+        </div>
+        <div class="border-b border-tertiary pb-3.5 js_acc2">
+          <div class="flex items-center justify-between">
+            <h3 class="font-bold expanded leading-[1.08] text-base">Можно ли купить билет на входе?</h3>
+            <img
+              class="w-6 h-6 js_acc_icon2 transition-all ease-linear duration-200"
+              src="public/icons/Vector.svg"
+              alt="плюс" />
+          </div>
+          <div class="max-h-0 overflow-hidden js_acc_content2 transition-all ease-linear duration-200">
+            <p class="pt-2 expanded text-xs text-dark md:text-sm md:font-graphik md:max-w-[82%] md:pt-2.5">
+              Наша ключевая ценность. «Нет» — значит «нет», «да» — значит «да». На любое взаимодействие с другим
+              человеком на вечеринке нужно обязательно спрашивать у него разрешение. Получать отказ и отказывать самому
+              — это ок.
+            </p>
+          </div>
+        </div>
+        <div class="border-b border-tertiary pb-3.5 js_acc2">
+          <div class="flex items-center justify-between">
+            <h3 class="font-bold expanded leading-[1.08] text-base">
+              Смогу ли я вернуть опалченный билетв случае необходимости?
+            </h3>
+            <img
+              class="w-6 h-6 js_acc_icon2 transition-all ease-linear duration-200"
+              src="public/icons/Vector.svg"
+              alt="плюс" />
+          </div>
+          <div class="max-h-0 overflow-hidden js_acc_content2 transition-all ease-linear duration-200">
+            <p class="pt-2 expanded text-xs text-dark md:text-sm md:font-graphik md:max-w-[82%] md:pt-2.5">
+              Наша ключевая ценность. «Нет» — значит «нет», «да» — значит «да». На любое взаимодействие с другим
+              человеком на вечеринке нужно обязательно спрашивать у него разрешение. Получать отказ и отказывать самому
+              — это ок.
+            </p>
+          </div>
+        </div>
+        <div class="border-b border-tertiary pb-3.5 js_acc2">
+          <div class="flex items-center justify-between">
+            <h3 class="font-bold expanded leading-[1.08] text-base">Разрешена ли фотосъемка на вечеринке?</h3>
+            <img
+              class="w-6 h-6 js_acc_icon2 transition-all ease-linear duration-200"
+              src="public/icons/Vector.svg"
+              alt="плюс" />
+          </div>
+          <div class="max-h-0 overflow-hidden js_acc_content2 transition-all ease-linear duration-200">
+            <p class="pt-2 expanded text-xs text-dark md:text-sm md:font-graphik md:max-w-[82%] md:pt-2.5">
+              Наша ключевая ценность. «Нет» — значит «нет», «да» — значит «да». На любое взаимодействие с другим
+              человеком на вечеринке нужно обязательно спрашивать у него разрешение. Получать отказ и отказывать самому
+              — это ок.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="font-bold expanded text-base leading-[1.08] flex flex-col gap-5 items-center md:items-start lg:self-end">
+        <p>Остались <br />вопросы?</p>
+        <button
+          class="bg-tertiary text-white flex gap-2 items-center justify-center w-50 h-12 rounded-[10px] hover:bg-white hover:text-tertiary group">
+          Напишите нам
+          <div class="relative h-fit w-fit">
+            <img
+              class="w-5 h-5 absolute top-0 group-hover:opacity-0 transition-opacity ease-linear duration-200"
+              src="public/icons/Telegram1.svg"
+              alt="телеграм" />
+            <img class="w-5 h-5" src="public/icons/Telegram3.svg" alt="телеграм" />
+          </div>
+        </button>
+      </div>
+    </section>
+
+    <footer
+      class="bg-gradient-to-b from-primary to-tertiary text-secondary pt-12 px-2.5 pb-14 text-center md:py-[90px] md:px-5 relative overflow-clip">
+      <img class="absolute w-full top-4 left-0 z-0 md:hidden" src="public/images/Group_545.svg" alt="декор" />
+      <img
+        class="absolute w-1/3 top-[100px] right-0 z-0 hidden md:block lg:w-1/5 lg:right-[4vw] xl:right-[calc((100vw-1200px)/2)]"
+        src="public/images/Group_546.svg"
+        alt="декор" />
+      <img
+        class="absolute w-1/3 top-10 left-0 z-0 hidden md:block lg:w-1/5 lg:left-[8vw] xl:left-[calc((100vw-1200px)/2)]"
+        src="public/images/Group_547.svg"
+        alt="декор" />
+      <h2
+        class="font-bold expanded leading-[0.93] text-[57px] break-words uppercase mb-[38px] md:leading-[1] md:text-[102px] md:mb-[74px] relative z-30">
+        Давайте <br />остава<br class="lg:hidden" />ться
+        <span class="block w-fit m-auto">
+          на <br class="lg:hidden" />связи
+          <img
+            class="absolute z-40 bottom-0 translate-y-3 left-1/2 -translate-x-1/2 w-[614зч] hidden md:block"
+            src="/public/images/Vector_3.svg"
+            alt="декор"
+        /></span>
+      </h2>
+      <div class="flex gap-3 md:gap-[73px] w-fit m-auto pb-[38px] md:pb-[63px] relative z-40">
+        <a class="font-medium text-xs flex gap-[5px] items-center md:text-xl md:gap-3" href="#">
+          <img class="w-3.5 h-3.5 md:w-6 md:h-6" src="public/icons/Telegram.svg" alt="иконка телеграм" />
+          Telegram</a
+        >
+        <a class="font-medium text-xs flex gap-[5px] items-center md:text-xl md:gap-3" href="#">
+          <img class="w-3.5 h-3.5 md:w-6 md:h-6" src="public/icons/Instagram.svg" alt="иконка инстаграм" />
+          Instagram</a
+        >
+      </div>
+      <form
+        class="flex flex-col gap-5 items-center px-5 w-full md:flex-row md:gap-10 m-auto md:w-fit md:px-0 relative z-40">
+        <p class="font-bold expanded text-base leading-[1] text-center md:text-left">
+          Подписывайтесь <br />на нашу рассылку
+        </p>
+        <input
+          class="bg-white text-tertiary font-medium text-base leading-[0.8] py-[15px] px-5 rounded-[10px] placeholder:text-tertiary placeholder:font-medium placeholder:text-base w-full md:max-w-[260px]"
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Ваша почта" />
+        <button
+          class="text-primary border border-secondary bg-secondary font-bold expanded text-base leading-[0.8] py-[15px] px-5 rounded-full hover:bg-white hover:border-white active:text-secondary active:border-secondary active:bg-transparent w-fit grow-0"
+          type="submit">
+          Отправить
+        </button>
+      </form>
+    </footer>
+
+    <script src="src/js/main.js"></script>
+    <script src="src/js/partypage.js" type="module"></script>
+  </body>
+</html>

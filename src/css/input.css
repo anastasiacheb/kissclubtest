@@ -1,0 +1,108 @@
+@import 'tailwindcss';
+
+/* npx @tailwindcss/cli -i src/css/input.css -o src/css/output.css --watch */
+
+@theme {
+  --color-primary: #ff3e00;
+  --color-secondary: #ffd9ff;
+  --color-tertiary: #fb339a;
+  --color-accent: #fdff62;
+  --color-dark: #151419;
+  --color-extra: #3a00ff;
+
+  --font-halvar: 'Halvar', sans-serif;
+  --font-graphik: 'Graphik LCG', sans-serif;
+
+  --screen-mid: 800px;
+}
+
+@layer base {
+  * {
+    @apply transition-colors duration-300 ease-linear;
+  }
+
+  button {
+    @apply cursor-pointer;
+  }
+
+  .scrollbar-hidden::-webkit-scrollbar {
+    width: 0;
+  }
+
+  .expanded {
+    font-stretch: expanded;
+  }
+
+  .slanted {
+    font-style: oblique;
+  }
+
+  .swiper-pagination-bullet-active {
+    @apply !border-red-500; /* Активная миниатюра */
+  }
+
+  /* .swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    color: #000;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  .swiper-pagination-bullet-active {
+    color: #fff;
+    background: #007aff;
+  } */
+}
+
+@font-face {
+  font-family: 'Graphik LCG';
+  src: url('/../public/fonts/GraphikLCG-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* expanded */
+@font-face {
+  font-family: 'Halvar';
+  src: url('/../public/fonts/HalvarBreit-Rg.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: expanded;
+}
+
+/* medium */
+@font-face {
+  font-family: 'Halvar';
+  src: url('/../public/fonts/HalvarBreit-Md.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* bold expanded */
+@font-face {
+  font-family: 'Halvar';
+  src: url('/../public/fonts/HalvarBreit-Bd.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: expanded;
+}
+
+/* extra bold */
+@font-face {
+  font-family: 'Halvar';
+  src: url('/../public/fonts/HalvarBreit-XBd.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+}
+
+/* bold slanted */
+@font-face {
+  font-family: 'Halvar';
+  src: url('/../public/fonts/HalvarBreit-BdSlanted.woff2') format('woff2');
+  font-weight: 700;
+  font-style: oblique;
+}

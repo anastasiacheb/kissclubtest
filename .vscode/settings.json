@@ -1,0 +1,8 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  }
+  // "[html]": {
+  //   "editor.defaultFormatter": "vscode.html-language-features"
+  // }
+}

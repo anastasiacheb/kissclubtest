@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="ru" style="overflow-x: hidden">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="src/css/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <title>Document</title>
+  </head>
+
+  <body class="overflow-x-hidden font-halvar text-sm font-normal expanded">
+    <nav
+      class="z-50 left-0 right-0 bg-primary lg:flex lg:justify-between lg:py-3 lg:px-5 lg:items-start js_nav fixed top-0">
+      <div class="flex justify-between items-center pt-[14px] pb-4 px-2.5 bg-primary lg:p-0">
+        <div>
+          <img class="w-[120px] h-auto lg:w-auto lg:h-10" src="public/icons/Group_475.svg" alt="лого" />
+        </div>
+        <button aria-label="открыть мобильное меню" class="cursor-pointer js_nav_open_btn lg:hidden">
+          <img class="w-[30px] h-[30px]" src="public/icons/Frame_316.svg" alt="меню" />
+        </button>
+      </div>
+      <div
+        class="w-full h-dvh bg-[#151419] opacity-50 absolute top-0 js_nav_overlay scale-0 transition-opacity ease-linear duration-200 lg:hidden"></div>
+      <div
+        class="bg-primary flex flex-col gap-[43px] pt-[14px] absolute top-0 right-0 pl-[30px] max-w-[270px] translate-x-full h-dvh overflow-hidden transition-all ease-linear duration-200 js_nav_mob_menu lg:relative lg:h-auto lg:max-w-fit lg:translate-x-0 lg:pt-0 lg:pl-0">
+        <button aria-label="закрыть мобильное меню" class="cursor-pointer js_nav_close_btn lg:hidden">
+          <img class="w-auto h-[30px]" src="public/icons/Frame_290.svg" alt="меню" />
+        </button>
+        <div class="flex flex-col gap-5 lg:flex-row lg:gap-6 lg:py-4">
+          <div class="flex flex-col">
+            <button
+              class="cursor-pointer font-halvar font-medium text-2xl text-secondary flex gap-2 items-start js_navac_button leading-[0.8] lg:font-normal lg:text-sm">
+              О проекте
+              <img class="js_navac_icon lg:hidden" src="public/icons/Frame_29df0.svg" alt="открыть" />
+            </button>
+            <div
+              class="flex flex-col gap-1.5 max-h-0 overflow-hidden transition-all ease-linear duration-200 js_navac_content">
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary pt-3 js_nav_link text-sm lg:text-[10px] lg:pt-[14px]"
+                href="#"
+                >Визитка</a
+              >
+              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+                >Кому мы <br class="hidden lg:block" />помогаем</a
+              >
+              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+                >Цели/задачи/<br class="hidden lg:block" />миссия</a
+              >
+              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+                >Ценности</a
+              >
+              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+                >Правила</a
+              >
+              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+                >Как помочь?</a
+              >
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px] pb-1 lg:pb-0"
+                href="#"
+                >Юридическая <br class="hidden lg:block" />информация</a
+              >
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <button
+              class="cursor-pointer font-halvar font-medium text-2xl text-secondary flex gap-2 items-start js_navac_button leading-[0.8] lg:font-normal lg:text-sm">
+              Мероприятия
+              <img
+                class="js_navac_icon transition-all ease-linear duration-200 lg:hidden"
+                src="public/icons/Frame_29df0.svg"
+                alt="открыть" />
+            </button>
+            <div
+              class="flex flex-col gap-1.5 max-h-0 overflow-hidden transition-all ease-linear duration-200 js_navac_content">
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link pt-3 text-sm lg:text-[10px] lg:pt-[14px]"
+                href="#"
+                >Поцелуйный бар</a
+              >
+              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+                >Кисскотека</a
+              >
+              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+                >Правила</a
+              >
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link pb-1 text-sm lg:text-[10px] lg:pb-0"
+                href="#"
+                >FAQ</a
+              >
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <button
+              class="cursor-pointer font-halvar font-medium text-2xl text-secondary flex gap-2 items-start js_navac_button leading-[0.8] lg:font-normal lg:text-sm">
+              Тренинги
+              <img
+                class="js_navac_icon transition-all ease-linear duration-200 lg:hidden"
+                src="public/icons/Frame_29df0.svg"
+                alt="открыть" />
+            </button>
+            <div
+              class="flex flex-col gap-1.5 max-h-0 overflow-hidden transition-all ease-linear duration-200 js_navac_content">
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link pt-3 text-sm lg:text-[10px] lg:pt-[14px]"
+                href="#"
+                >Лекции</a
+              >
+              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+                >Мастер-<br class="hidden lg:block" />классы</a
+              >
+              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+                >Социальные <br class="hidden lg:block" />игры</a
+              >
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link pb-1 text-sm lg:text-[10px] lg:pb-0"
+                href="#"
+                >Календарь <br />мероприятий</a
+              >
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <button
+              class="cursor-pointer font-halvar font-medium text-2xl text-secondary flex gap-2 items-start js_navac_button text-left leading-[0.8] lg:font-normal lg:text-sm">
+              Счастливые <br class="lg:hidden" />
+              истории
+              <img
+                class="js_navac_icon transition-all ease-linear duration-200 lg:hidden"
+                src="public/icons/Frame_29df0.svg"
+                alt="открыть" />
+            </button>
+            <div
+              class="flex flex-col gap-1.5 max-h-0 overflow-hidden transition-all ease-linear duration-200 js_navac_content">
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link pt-3 text-sm lg:text-[10px] lg:pt-[14px]"
+                href="#"
+                >Большие интервью</a
+              >
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link pb-1 text-sm lg:text-[10px] lg:pb-0"
+                href="#"
+                >Отзывы участников</a
+              >
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <button
+              class="cursor-pointer font-halvar font-medium text-2xl text-secondary flex gap-2 items-start js_navac_button lg:font-normal lg:text-sm leading-[0.8]">
+              Участникам
+              <img
+                class="js_navac_icon transition-all ease-linear duration-200 lg:hidden"
+                src="public/icons/Frame_29df0.svg"
+                alt="открыть" />
+            </button>
+            <div
+              class="flex flex-col gap-1.5 max-h-0 overflow-hidden transition-all ease-linear duration-200 js_navac_content">
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link pt-3 text-sm lg:text-[10px] lg:pt-[14px]"
+                href="#"
+                >Куда пойти?</a
+              >
+              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+                >Программа <br />
+                лояльности</a
+              >
+              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+                >Вопросы <br class="hidden lg:block" />и ответы</a
+              >
+              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+                >Большие <br class="hidden lg:block" />интервью</a
+              >
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link pb-1 text-sm lg:text-[10px] lg:pb-0"
+                href="#"
+                >Отзывы <br class="hidden lg:block" />участников</a
+              >
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <button
+              class="cursor-pointer font-halvar font-medium text-2xl text-secondary flex gap-2 items-start js_navac_button leading-[0.8] lg:font-normal lg:text-sm">
+              База знаний
+              <img
+                class="js_navac_icon transition-all ease-linear duration-200 lg:hidden"
+                src="public/icons/Frame_29df0.svg"
+                alt="открыть" />
+            </button>
+            <div
+              class="flex flex-col gap-1.5 max-h-0 overflow-hidden transition-all ease-linear duration-200 js_navac_content">
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link pt-3 text-sm lg:text-[10px] lg:pt-[14px]"
+                href="#"
+                >Исследования</a
+              >
+              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+                >Альманах</a
+              >
+              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+                >Полезные статьи</a
+              >
+              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+                >Блог</a
+              >
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link pb-1 text-sm lg:text-[10px] lg:pb-0"
+                href="#"
+                >FAQ</a
+              >
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <a
+              href="#"
+              class="font-halvar font-medium text-2xl text-secondary flex gap-2 leading-[0.8] js_nav_link lg:font-normal lg:text-sm"
+              >Контакты</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="bg-secondary text-primary pt-10 pb-6 mt-[60px] px-2.5 md:pt-14 md:pb-16 md:px-5">
+      <h1 class="font-bold expanded leading-[0.9] text-[32px] pb-5 md:text-[52px] md:pb-7">Галерея</h1>
+      <div class="overflow-x-auto -mx-2.5 scrollbar-hidden pb-7 md:pb-8">
+        <div class="flex gap-2 w-fit ml-2.5">
+          <button
+            class="font-bold expanded text-xs h-[25px] flex items-center justify-center w-[62px] border border-primary rounded-full md:text-xl md:w-[106px] md:h-[38px] js-tab-button">
+            2025
+          </button>
+          <button
+            class="font-bold expanded text-xs h-[25px] flex items-center justify-center w-[62px] border border-primary rounded-full md:text-xl md:w-[106px] md:h-[38px] bg-primary text-white js-tab-button">
+            2024
+          </button>
+          <button
+            class="font-bold expanded text-xs h-[25px] flex items-center justify-center w-[62px] border border-primary rounded-full md:text-xl md:w-[106px] md:h-[38px] js-tab-button">
+            2023
+          </button>
+          <button
+            class="font-bold expanded text-xs h-[25px] flex items-center justify-center w-[62px] border border-primary rounded-full md:text-xl md:w-[106px] md:h-[38px] js-tab-button">
+            2022
+          </button>
+          <button
+            class="font-bold expanded text-xs h-[25px] flex items-center justify-center w-[62px] border border-primary rounded-full md:text-xl md:w-[106px] md:h-[38px] js-tab-button">
+            2021
+          </button>
+        </div>
+      </div>
+      <div>
+        <div class="gap-4 md:grid-cols-2 md:gap-x-10 md:gap-y-5.5 lg:grid-cols-3 hidden js-tab-content">
+          <a class="flex flex-col gap-2" href="#">
+            <img class="aspect-[360/220] object-cover" src="public/images/Photo.webp" alt="фото" />
+            <div class="flex items-center justify-between">
+              <div class="flex flex-col gap-0.5 md:gap-0">
+                <h2 class="text-tertiary font-bold expanded text-xl leading-[1.1]">Поцелуйный Бар</h2>
+                <p class="text-dark font-bold text-xs leading-[1] md:text-base">12 февраля</p>
+              </div>
+              <img class="w-8 h-8" src="public/icons/Arrow.svg" alt="стрелка" />
+            </div>
+          </a>
+        </div>
+        <div class="grid gap-4 md:grid-cols-2 md:gap-x-10 md:gap-y-5.5 lg:grid-cols-3 js-tab-content">
+          <a class="flex flex-col gap-2" href="gallery-single.html">
+            <img class="aspect-[360/220] object-cover" src="public/images/Photo.webp" alt="фото" />
+            <div class="flex items-center justify-between">
+              <div class="flex flex-col gap-0.5 md:gap-0">
+                <h2 class="text-tertiary font-bold expanded text-xl leading-[1.1]">Поцелуйный Бар</h2>
+                <p class="text-dark font-bold text-xs leading-[1] md:text-base">12 февраля</p>
+              </div>
+              <img class="w-8 h-8" src="public/icons/Arrow.svg" alt="стрелка" />
+            </div>
+          </a>
+          <a class="flex flex-col gap-2" href="#">
+            <img class="aspect-[360/220] object-cover" src="public/images/Photo2.webp" alt="фото" />
+            <div class="flex items-center justify-between">
+              <div class="flex flex-col gap-0.5 md:gap-0">
+                <h2 class="text-tertiary font-bold expanded text-xl leading-[1.1]">Кисскотека</h2>
+                <p class="text-dark font-bold text-xs leading-[1] md:text-base">3 марта</p>
+              </div>
+              <img class="w-8 h-8" src="public/icons/Arrow.svg" alt="стрелка" />
+            </div>
+          </a>
+          <a class="flex flex-col gap-2" href="#">
+            <img class="aspect-[360/220] object-cover" src="public/images/Photo3.webp" alt="фото" />
+            <div class="flex items-center justify-between">
+              <div class="flex flex-col gap-0.5 md:gap-0">
+                <h2 class="text-tertiary font-bold expanded text-xl leading-[1.1]">Кисскотека</h2>
+                <p class="text-dark font-bold text-xs leading-[1] md:text-base">17 марта</p>
+              </div>
+              <img class="w-8 h-8" src="public/icons/Arrow.svg" alt="стрелка" />
+            </div>
+          </a>
+          <a class="flex flex-col gap-2" href="#">
+            <img class="aspect-[360/220] object-cover" src="public/images/Photo4.webp" alt="фото" />
+            <div class="flex items-center justify-between">
+              <div class="flex flex-col gap-0.5 md:gap-0">
+                <h2 class="text-tertiary font-bold expanded text-xl leading-[1.1]">Кисскотека</h2>
+                <p class="text-dark font-bold text-xs leading-[1] md:text-base">10 мая</p>
+              </div>
+              <img class="w-8 h-8" src="public/icons/Arrow.svg" alt="стрелка" />
+            </div>
+          </a>
+          <a class="flex flex-col gap-2" href="#">
+            <img class="aspect-[360/220] object-cover" src="public/images/Photo5.webp" alt="фото" />
+            <div class="flex items-center justify-between">
+              <div class="flex flex-col gap-0.5 md:gap-0">
+                <h2 class="text-tertiary font-bold expanded text-xl leading-[1.1]">Кисскотека</h2>
+                <p class="text-dark font-bold text-xs leading-[1] md:text-base">19 июня</p>
+              </div>
+              <img class="w-8 h-8" src="public/icons/Arrow.svg" alt="стрелка" />
+            </div>
+          </a>
+        </div>
+        <div class="gap-4 md:grid-cols-2 md:gap-x-10 md:gap-y-5.5 lg:grid-cols-3 hidden js-tab-content">
+          <a class="flex flex-col gap-2" href="#">
+            <img class="aspect-[360/220] object-cover" src="public/images/Photo4.webp" alt="фото" />
+            <div class="flex items-center justify-between">
+              <div class="flex flex-col gap-0.5 md:gap-0">
+                <h2 class="text-tertiary font-bold expanded text-xl leading-[1.1]">Кисскотека</h2>
+                <p class="text-dark font-bold text-xs leading-[1] md:text-base">10 мая</p>
+              </div>
+              <img class="w-8 h-8" src="public/icons/Arrow.svg" alt="стрелка" />
+            </div>
+          </a>
+        </div>
+        <div class="gap-4 md:grid-cols-2 md:gap-x-10 md:gap-y-5.5 lg:grid-cols-3 hidden js-tab-content">
+          <a class="flex flex-col gap-2" href="#">
+            <img class="aspect-[360/220] object-cover" src="public/images/Photo5.webp" alt="фото" />
+            <div class="flex items-center justify-between">
+              <div class="flex flex-col gap-0.5 md:gap-0">
+                <h2 class="text-tertiary font-bold expanded text-xl leading-[1.1]">Кисскотека</h2>
+                <p class="text-dark font-bold text-xs leading-[1] md:text-base">19 июня</p>
+              </div>
+              <img class="w-8 h-8" src="public/icons/Arrow.svg" alt="стрелка" />
+            </div>
+          </a>
+          <a class="flex flex-col gap-2" href="#">
+            <img class="aspect-[360/220] object-cover" src="public/images/Photo3.webp" alt="фото" />
+            <div class="flex items-center justify-between">
+              <div class="flex flex-col gap-0.5 md:gap-0">
+                <h2 class="text-tertiary font-bold expanded text-xl leading-[1.1]">Кисскотека</h2>
+                <p class="text-dark font-bold text-xs leading-[1] md:text-base">17 марта</p>
+              </div>
+              <img class="w-8 h-8" src="public/icons/Arrow.svg" alt="стрелка" />
+            </div>
+          </a>
+        </div>
+        <div class="gap-4 md:grid-cols-2 md:gap-x-10 md:gap-y-5.5 lg:grid-cols-3 hidden js-tab-content">
+          <a class="flex flex-col gap-2" href="#">
+            <img class="aspect-[360/220] object-cover" src="public/images/Photo4.webp" alt="фото" />
+            <div class="flex items-center justify-between">
+              <div class="flex flex-col gap-0.5 md:gap-0">
+                <h2 class="text-tertiary font-bold expanded text-xl leading-[1.1]">Кисскотека</h2>
+                <p class="text-dark font-bold text-xs leading-[1] md:text-base">10 мая</p>
+              </div>
+              <img class="w-8 h-8" src="public/icons/Arrow.svg" alt="стрелка" />
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      class="bg-gradient-to-b from-primary to-tertiary text-secondary pt-12 px-2.5 pb-14 text-center md:py-[90px] md:px-5 relative overflow-clip">
+      <div
+        class="pb-[38px] md:pb-[60px] flex flex-col gap-[30px] md:flex-row md:justify-between md:items-center md:max-w-[765px] m-auto">
+        <img class="w-[220px] h-auto m-auto md:hidden" src="public/icons/KissClub_Logo.svg" alt="цветок" />
+        <img class="w-[360px] h-auto m-auto hidden md:block" src="public/icons/KissClub_Logo2.svg" alt="цветок" />
+        <div class="flex gap-3 w-fit m-auto relative z-50 md:flex-col md:gap-5">
+          <a class="font-medium text-xs flex gap-[5px] items-center md:text-xl md:gap-3 leading-[1]" href="#">
+            <img class="w-3.5 h-3.5 md:w-6 md:h-6" src="public/icons/Telegram.svg" alt="иконка телеграм" />
+            Telegram</a
+          >
+          <a class="font-medium text-xs flex gap-[5px] items-center md:text-xl md:gap-3 leading-[1]" href="#">
+            <img class="w-3.5 h-3.5 md:w-6 md:h-6" src="public/icons/Instagram.svg" alt="иконка инстаграм" />
+            Instagram</a
+          >
+        </div>
+      </div>
+      <!-- <img class="absolute w-full top-4 left-0 z-0 md:hidden" src="public/images/Group_545.svg" alt="декор" /> -->
+      <!-- <img
+        class="absolute w-1/3 top-[100px] right-0 z-0 hidden md:block lg:w-1/5 lg:right-[4vw] xl:right-[calc((100vw-1200px)/2)]"
+        src="public/images/Group_546.svg"
+        alt="декор" />
+      <img
+        class="absolute w-1/3 top-10 left-0 z-0 hidden md:block lg:w-1/5 lg:left-[8vw] xl:left-[calc((100vw-1200px)/2)]"
+        src="public/images/Group_547.svg"
+        alt="декор" /> -->
+      <!-- <h2
+        class="font-bold expanded leading-[0.93] text-[57px] break-words uppercase pb-[38px] md:leading-[1] md:text-[102px] md:pb-[74px] relative z-50">
+        Давайте <br />остава<br class="lg:hidden" />ться
+        <span class="relative block w-fit m-auto">
+          на <br class="lg:hidden" />связи
+          <img
+            class="absolute z-50 top-0 left-0 w-[150%] hidden md:block"
+            src="/public/images/Vector_3.svg"
+            alt="декор"
+        /></span>
+      </h2> -->
+
+      <form
+        class="flex flex-col gap-5 items-center px-5 w-full md:flex-row md:gap-10 m-auto md:w-fit md:px-0 relative z-50">
+        <p class="font-bold expanded text-base leading-[1] text-center md:text-left">
+          Подписывайтесь <br />на нашу рассылку
+        </p>
+        <input
+          class="bg-white text-tertiary font-medium text-base leading-[0.8] py-[15px] px-5 rounded-[10px] placeholder:text-tertiary placeholder:font-medium placeholder:text-base w-full md:max-w-[260px]"
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Ваша почта" />
+        <button
+          class="text-primary border border-secondary bg-secondary font-bold expanded text-base leading-[0.8] py-[15px] px-5 rounded-full hover:bg-white hover:border-white active:text-secondary active:border-secondary active:bg-transparent w-fit grow-0 md:w-[160px]"
+          type="submit">
+          Отправить
+        </button>
+      </form>
+    </footer>
+
+    <script src="src/js/main.js"></script>
+    <script src="src/js/gallerypage.js" type="module"></script>
+  </body>
+</html>

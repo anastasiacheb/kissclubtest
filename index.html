@@ -1,0 +1,856 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="src/css/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <title>Document</title>
+  </head>
+  <body class="overflow-x-hidden font-halvar text-sm font-normal expanded">
+    <nav
+      class="z-50 left-0 right-0 bg-primary lg:flex lg:justify-between lg:py-3 lg:px-5 lg:items-start js_nav fixed top-0">
+      <div class="flex justify-between items-center pt-[14px] pb-4 px-2.5 bg-primary lg:p-0">
+        <div>
+          <img class="w-[120px] h-auto lg:w-auto lg:h-10" src="public/icons/Group_475.svg" alt="лого" />
+        </div>
+        <button aria-label="открыть мобильное меню" class="cursor-pointer js_nav_open_btn lg:hidden">
+          <img class="w-[30px] h-[30px]" src="public/icons/Frame_316.svg" alt="меню" />
+        </button>
+      </div>
+      <div
+        class="w-full h-dvh bg-[#151419] opacity-50 absolute top-0 js_nav_overlay scale-0 transition-opacity ease-linear duration-200 lg:hidden"></div>
+      <div
+        class="bg-primary flex flex-col gap-[43px] pt-[14px] absolute top-0 right-0 pl-[30px] max-w-[270px] translate-x-full h-dvh overflow-hidden transition-all ease-linear duration-200 js_nav_mob_menu lg:relative lg:h-auto lg:max-w-fit lg:translate-x-0 lg:pt-0 lg:pl-0">
+        <button aria-label="закрыть мобильное меню" class="cursor-pointer js_nav_close_btn lg:hidden">
+          <img class="w-auto h-[30px]" src="public/icons/Frame_290.svg" alt="меню" />
+        </button>
+        <div class="flex flex-col gap-5 lg:flex-row lg:gap-6 lg:py-4">
+          <div class="flex flex-col">
+            <button
+              class="cursor-pointer font-halvar font-medium text-2xl text-secondary flex gap-2 items-start js_navac_button leading-[0.8] lg:font-normal lg:text-sm">
+              О проекте
+              <img class="js_navac_icon lg:hidden" src="public/icons/Frame_29df0.svg" alt="открыть" />
+            </button>
+            <div
+              class="flex flex-col gap-1.5 max-h-0 overflow-hidden transition-all ease-linear duration-200 js_navac_content">
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary pt-3 js_nav_link text-sm lg:text-[10px] lg:pt-[14px]"
+                href="#"
+                >Визитка</a
+              >
+              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+                >Кому мы <br class="hidden lg:block" />помогаем</a
+              >
+              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+                >Цели/задачи/<br class="hidden lg:block" />миссия</a
+              >
+              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+                >Ценности</a
+              >
+              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+                >Правила</a
+              >
+              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+                >Как помочь?</a
+              >
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px] pb-1 lg:pb-0"
+                href="#"
+                >Юридическая <br class="hidden lg:block" />информация</a
+              >
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <button
+              class="cursor-pointer font-halvar font-medium text-2xl text-secondary flex gap-2 items-start js_navac_button leading-[0.8] lg:font-normal lg:text-sm">
+              Мероприятия
+              <img
+                class="js_navac_icon transition-all ease-linear duration-200 lg:hidden"
+                src="public/icons/Frame_29df0.svg"
+                alt="открыть" />
+            </button>
+            <div
+              class="flex flex-col gap-1.5 max-h-0 overflow-hidden transition-all ease-linear duration-200 js_navac_content">
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link pt-3 text-sm lg:text-[10px] lg:pt-[14px]"
+                href="#"
+                >Поцелуйный бар</a
+              >
+              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+                >Кисскотека</a
+              >
+              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+                >Правила</a
+              >
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link pb-1 text-sm lg:text-[10px] lg:pb-0"
+                href="#"
+                >FAQ</a
+              >
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <button
+              class="cursor-pointer font-halvar font-medium text-2xl text-secondary flex gap-2 items-start js_navac_button leading-[0.8] lg:font-normal lg:text-sm">
+              Тренинги
+              <img
+                class="js_navac_icon transition-all ease-linear duration-200 lg:hidden"
+                src="public/icons/Frame_29df0.svg"
+                alt="открыть" />
+            </button>
+            <div
+              class="flex flex-col gap-1.5 max-h-0 overflow-hidden transition-all ease-linear duration-200 js_navac_content">
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link pt-3 text-sm lg:text-[10px] lg:pt-[14px]"
+                href="#"
+                >Лекции</a
+              >
+              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+                >Мастер-<br class="hidden lg:block" />классы</a
+              >
+              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+                >Социальные <br class="hidden lg:block" />игры</a
+              >
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link pb-1 text-sm lg:text-[10px] lg:pb-0"
+                href="#"
+                >Календарь <br />мероприятий</a
+              >
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <button
+              class="cursor-pointer font-halvar font-medium text-2xl text-secondary flex gap-2 items-start js_navac_button text-left leading-[0.8] lg:font-normal lg:text-sm">
+              Счастливые <br class="lg:hidden" />
+              истории
+              <img
+                class="js_navac_icon transition-all ease-linear duration-200 lg:hidden"
+                src="public/icons/Frame_29df0.svg"
+                alt="открыть" />
+            </button>
+            <div
+              class="flex flex-col gap-1.5 max-h-0 overflow-hidden transition-all ease-linear duration-200 js_navac_content">
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link pt-3 text-sm lg:text-[10px] lg:pt-[14px]"
+                href="#"
+                >Большие интервью</a
+              >
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link pb-1 text-sm lg:text-[10px] lg:pb-0"
+                href="#"
+                >Отзывы участников</a
+              >
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <button
+              class="cursor-pointer font-halvar font-medium text-2xl text-secondary flex gap-2 items-start js_navac_button lg:font-normal lg:text-sm leading-[0.8]">
+              Участникам
+              <img
+                class="js_navac_icon transition-all ease-linear duration-200 lg:hidden"
+                src="public/icons/Frame_29df0.svg"
+                alt="открыть" />
+            </button>
+            <div
+              class="flex flex-col gap-1.5 max-h-0 overflow-hidden transition-all ease-linear duration-200 js_navac_content">
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link pt-3 text-sm lg:text-[10px] lg:pt-[14px]"
+                href="#"
+                >Куда пойти?</a
+              >
+              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+                >Программа <br />
+                лояльности</a
+              >
+              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+                >Вопросы <br class="hidden lg:block" />и ответы</a
+              >
+              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+                >Большие <br class="hidden lg:block" />интервью</a
+              >
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link pb-1 text-sm lg:text-[10px] lg:pb-0"
+                href="#"
+                >Отзывы <br class="hidden lg:block" />участников</a
+              >
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <button
+              class="cursor-pointer font-halvar font-medium text-2xl text-secondary flex gap-2 items-start js_navac_button leading-[0.8] lg:font-normal lg:text-sm">
+              База знаний
+              <img
+                class="js_navac_icon transition-all ease-linear duration-200 lg:hidden"
+                src="public/icons/Frame_29df0.svg"
+                alt="открыть" />
+            </button>
+            <div
+              class="flex flex-col gap-1.5 max-h-0 overflow-hidden transition-all ease-linear duration-200 js_navac_content">
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link pt-3 text-sm lg:text-[10px] lg:pt-[14px]"
+                href="#"
+                >Исследования</a
+              >
+              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+                >Альманах</a
+              >
+              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+                >Полезные статьи</a
+              >
+              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+                >Блог</a
+              >
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link pb-1 text-sm lg:text-[10px] lg:pb-0"
+                href="#"
+                >FAQ</a
+              >
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <a
+              href="#"
+              class="font-halvar font-medium text-2xl text-secondary flex gap-2 leading-[0.8] js_nav_link lg:font-normal lg:text-sm"
+              >Контакты</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <header class="bg-gradient-to-b from-primary to-tertiary">
+      <div
+        class="px-5 hidden flex-col gap-[30px] items-center pt-[30px] pb-12 mt-[60px] lg:mt-16 lg:flex h-[calc(100dvh-64px)] justify-center">
+        <div class="flex justify-between items-center w-full relative">
+          <p class="text-secondary font-halvar font-bold expanded text-sm leading-[1] lg:text-base">
+            Следующая <br />вечеринка:
+          </p>
+          <div class="relative flex justify-center items-center">
+            <img class="w-[63vw]" src="public/images/Subtract1.webp" alt="банер" />
+            <img
+              class="w-[40vw] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+              src="public/images/Кисскотека.svg"
+              alt="банер" />
+          </div>
+          <button
+            class="text-tertiary bg-secondary leading-[0.8] font-bold expanded text-xs px-[15px] py-2.5 rounded-full cursor-pointer lg:text-base lg:px-4.5 lg:py-3.5 hover:bg-white border border-secondary hover:border-white active:bg-transparent active:border-secondary active:text-secondary">
+            Подробнее
+          </button>
+          <div class="flex gap-5 absolute bottom-0 right-0">
+            <a href="#"><img class="w-5 h-5" src="public/icons/Telegram.svg" alt="иконка телеграм" /></a>
+            <a href="#"><img class="w-5 h-5" src="public/icons/Instagram.svg" alt="иконка инстаграм" /></a>
+          </div>
+        </div>
+        <div class="flex justify-between items-center w-full max-w-[740px]">
+          <p
+            class="text-secondary font-halvar font-bold expanded text-base border-2 border-secondary rounded-full w-fit py-3 px-5 h-[35px] flex items-center">
+            15 февраля
+          </p>
+          <button
+            class="text-tertiary bg-accent text-base rounded-full px-4.5 flex items-center justify-center leading-[0.8] h-[38px] cursor-pointer font-bold w-fit -mt-1.5 hover:bg-white border border-accent hover:border-white active:bg-transparent active:border-accent active:text-accent">
+            Купить билет
+          </button>
+        </div>
+      </div>
+
+      <div class="px-2.5 flex-col gap-[30px] items-center pt-[30px] pb-12 mt-[60px] lg:mt-16 flex lg:hidden">
+        <div class="flex justify-between items-center w-full">
+          <p class="text-secondary font-halvar font-bold expanded text-sm leading-[1]">Следующая <br />вечеринка:</p>
+          <p
+            class="text-secondary font-halvar font-bold expanded text-xs border border-secondary rounded-full w-fit py-1.5 px-2 h-6 flex items-center">
+            15 февраля
+          </p>
+        </div>
+        <img class="w-full max-w-140" src="public/images/Group_543.svg" alt="банер" />
+        <button
+          class="text-tertiary bg-accent text-sm rounded-full px-[15px] flex items-center justify-center leading-[0.8] h-[33px] cursor-pointer font-bold w-fit -mt-1.5 hover:bg-white border border-accent hover:border-white active:bg-transparent active:border-accent active:text-accent">
+          Купить билет
+        </button>
+        <div class="flex justify-between items-center w-full">
+          <button
+            class="text-tertiary bg-secondary leading-[0.8] font-bold expanded text-xs px-[15px] py-2.5 rounded-full cursor-pointer hover:bg-white border border-secondary hover:border-white active:bg-transparent active:border-secondary active:text-secondary">
+            Подробнее
+          </button>
+          <div class="flex gap-3">
+            <a href="#"><img class="w-4 h-4" src="public/icons/Telegram.svg" alt="иконка телеграм" /></a>
+            <a href="#"><img class="w-4 h-4" src="public/icons/Instagram.svg" alt="иконка инстаграм" /></a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section
+      class="bg-secondary pt-10 pb-12 px-2.5 md:flex lg:gap-24 lg:justify-between lg:py-9 lg:px-5 md:items-center">
+      <div class="flex-1">
+        <h2
+          class="text-primary font-bold expanded text-[32px] leading-[0.9] flex flex-col gap-[5px] pb-6 lg:text-[52px]">
+          <span class="font-medim text-xs block leading-none lg:text-base">Что такое</span>Поцелуйный <br />клуб?
+        </h2>
+        <p class="pb-5 lg:pb-2 md:max-w-[408px] lg:ml-[18vw]">
+          Проект «Поцелуйный клуб» — это дейтинг-клуб, который устраивает яркие вечеринки, помогающие людям знакомиться
+          в приятной атмосфере, изучать собственную чувственность и находить «своих» людей.
+        </p>
+        <img class="w-full pb-[30px] md:hidden" src="public/images/pic_1.svg" alt="иллюстрация" />
+        <p class="pb-8 md:max-w-[408px] lg:ml-[18vw]">
+          Наша главная фишка — игровые механики, которые помогают знакомиться и общаться. Ты можешь быть самым
+          стеснительным котиком в мире, но мы все равно поможем тебе набраться смелости и сделать первый шаг.
+        </p>
+        <div class="flex justify-center lg:justify-start">
+          <button
+            class="text-secondary bg-primary border border-primary hover:text-primary hover:bg-white hover:border-white active:bg-secondary active:border-primary font-bold expanded px-[25px] py-3 rounded-full leading-[0.8] cursor-pointer">
+            Подробнее
+          </button>
+        </div>
+      </div>
+      <img class="w-full lg:w-[38vw] lg:max-w-none hidden md:block" src="public/images/pic_1.svg" alt="иллюстрация" />
+    </section>
+
+    <section class="bg-dark text-secondary pt-12 pb-[35px] px-2.5">
+      <h2
+        class="font-bold expanded leading-[0.9] text-[32px] pb-[44px] md:text-[52px] md:text-center md:pb-14 md:pt-[68px]">
+        Что мы делаем
+      </h2>
+      <div class="swiper w-full relative md:!hidden">
+        <div class="swiper-wrapper items-stretch">
+          <div class="swiper-slide w-full">
+            <h3 class="font-medium text-xl leading-[1] pb-3">Вечеринки <br />знакомств</h3>
+            <img class="w-full px-[60px]" src="public/images/Group_502.svg" alt="иллюстрация" />
+          </div>
+          <div class="swiper-slide w-full">
+            <h3 class="font-medium text-xl leading-[1] pb-3">Дейтинги</h3>
+            <img class="w-full px-[60px]" src="public/images/Dating.webp" alt="иллюстрация" />
+          </div>
+          <div class="swiper-slide w-full">
+            <h3 class="font-medium text-xl leading-[1] pb-3">Френдинги</h3>
+            <img class="w-full px-[60px]" src="public/images/Friending.webp" alt="иллюстрация" />
+          </div>
+          <div class="swiper-slide w-full">
+            <h3 class="font-medium text-xl leading-[1] pb-[30px]">Настолки</h3>
+            <img class="w-full px-[60px]" src="public/images/101.webp" alt="иллюстрация" />
+          </div>
+          <div class="swiper-slide w-full">
+            <h3 class="font-medium text-xl leading-[1] pb-3">Лекции</h3>
+            <img class="w-full px-[60px]" src="public/images/Lecture.webp" alt="иллюстрация" />
+          </div>
+          <div class="swiper-slide w-full">
+            <h3 class="font-medium text-xl leading-[1] pb-[30px]">Мастер-классы</h3>
+            <img class="w-full px-[60px]" src="public/images/Master_class.webp" alt="иллюстрация" />
+          </div>
+        </div>
+        <button class="swiper-button-prev1 absolute top-1/2 left-0 z-10" aria-label="предыдущий слайд">
+          <img class="w-10 h-10" src="public/icons/Frame_247.svg" alt="иконка пред слайд" />
+        </button>
+        <button class="swiper-button-next1 absolute top-1/2 right-0 z-10" aria-label="следующий слайд">
+          <img class="w-10 h-10" src="public/icons/Frame_246.svg" alt="иконка след слайд" />
+        </button>
+      </div>
+      <div class="flex justify-center md:hidden">
+        <button class="mt-5 font-medium leading-[0.8] py-2 px-4 border border-secondary rounded-full w-fit mx-auto">
+          Перейти
+        </button>
+      </div>
+      <div class="hidden md:grid mx-[18vw] md:grid-cols-2 lg:grid-cols-3 gap-y-14 gap-x-36">
+        <div class="w-full flex flex-col-reverse items-center gap-4">
+          <h3 class="font-medium text-base leading-[1] pb-3">Вечеринки <br />знакомств</h3>
+          <img class="w-full px-4" src="public/images/Group_502.svg" alt="иллюстрация" />
+        </div>
+        <div class="w-full flex flex-col-reverse items-center gap-3">
+          <h3 class="font-medium text-base leading-[1] pb-3">Дейтинги</h3>
+          <img class="w-full" src="public/images/Dating.webp" alt="иллюстрация" />
+        </div>
+        <div class="w-full flex flex-col-reverse items-center gap-3">
+          <h3 class="font-medium text-base leading-[1] pb-3">Френдинги</h3>
+          <img class="w-full" src="public/images/Friending.webp" alt="иллюстрация" />
+        </div>
+        <div class="w-full flex flex-col-reverse items-center gap-6">
+          <h3 class="font-medium text-base leading-[1] pb-[30px]">Настолки</h3>
+          <img class="w-full" src="public/images/101.webp" alt="иллюстрация" />
+        </div>
+        <div class="w-full flex flex-col-reverse items-center gap-4">
+          <h3 class="font-medium text-base leading-[1] pb-3">Лекции</h3>
+          <img class="w-full" src="public/images/Lecture.webp" alt="иллюстрация" />
+        </div>
+        <div class="w-full flex flex-col-reverse items-center gap-8">
+          <h3 class="font-medium text-base leading-[1] pb-[30px]">Мастер-классы</h3>
+          <img class="w-full" src="public/images/Master_class.webp" alt="иллюстрация" />
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-dark pt-[93px] pb-[72px] relative overflow-hidden md:pt-[130px] md:pb-[73px]">
+      <img class="absolute w-full top-0 z-40" src="public/images/gradient.webp" alt="декор" />
+      <img
+        class="absolute z-0 w-[180vw] max-w-none left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 lg:hidden"
+        src="public/images/Pattern_3x3.svg"
+        alt="фон в клетку" />
+      <img
+        class="absolute z-0 w-[102vw] max-w-none left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 hidden lg:block"
+        src="public/images/Pattern_3x31.svg"
+        alt="фон в клетку" />
+      <img class="relative z-40 w-full lg:w-[63vw] m-auto" src="public/images/Rectangle_73.webp" alt="видео" />
+    </section>
+
+    <section class="bg-primary text-secondary py-12 px-2.5 md:py-[68px] md:px-4">
+      <h2 class="font-bold expanded leading-[0.9] text-[32px] pb-[37px] md:text-[52px] md:pb-[67px]">
+        Ближайшие <br />мероприятия
+      </h2>
+      <div class="swiper2">
+        <div class="swiper-wrapper flex flex-col gap-[38px] md:flex-row md:gap-0 md:items-end">
+          <div class="swiper-slide !flex flex-col gap-2.5 md:gap-3">
+            <div class="flex justify-between items-start">
+              <h3 class="font-medium text-2xl leading-[1] flex flex-col gap-1 md:text-[28px]">
+                Бежим целоваться <span class="text-sm md:text-base">играем в 101 парами</span>
+              </h3>
+              <button>
+                <img class="w-[30px] h-[30px] hidden md:block" src="public/icons/Fill.svg" alt="стрелка" />
+              </button>
+            </div>
+            <div class="flex flex-col rounded-[10px] overflow-hidden">
+              <img
+                class="w-full rounded-t-[10px] md:h-[25vw] lg:h-[17vw]"
+                src="public/images/Rectangle_92.webp"
+                alt="рука с игровой карточкой" />
+              <div
+                class="flex justify-between items-center py-4 px-4.5 bg-secondary text-primary rounded-b-[10px] font-bold text-sm expanded md:text-base">
+                <p>14 февраля</p>
+                <p>20:00</p>
+              </div>
+            </div>
+            <div class="flex justify-between items-center pt-1">
+              <div class="flex items-center gap-2 font-medium md:text-base">
+                <p class="py-2 px-4 border border-secondary leading-[1] rounded-full md:px-5">4 000 ₽</p>
+                <p>с пары</p>
+              </div>
+              <button
+                class="font-bold expanded bg-secondary text-tertiary leading-[1] px-4 py-2 rounded-full border border-secondary hover:bg-white hover:border-white active:bg-primary active:border-secondary active:text-secondary md:text-base md:px-5">
+                Билеты
+              </button>
+            </div>
+          </div>
+          <div class="!flex flex-col gap-2.5 swiper-slide md:gap-3">
+            <div class="flex justify-between items-start">
+              <h3 class="font-medium text-2xl leading-[1] flex flex-col gap-1 md:font-[28px]">Кисскотека</h3>
+              <button>
+                <img class="w-[30px] h-[30px] hidden md:block" src="public/icons/Fill.svg" alt="стрелка" />
+              </button>
+            </div>
+            <div class="flex flex-col rounded-[10px] overflow-hidden">
+              <img
+                class="w-full rounded-t-[10px] md:h-[25vw] lg:h-[17vw]"
+                src="public/images/Rectangle_923.webp"
+                alt="рука с игровой карточкой" />
+              <div
+                class="flex justify-between items-center py-4 px-4.5 bg-secondary text-primary rounded-b-[10px] font-bold text-sm expanded md:text-base">
+                <p>15 февраля</p>
+                <p>22:00-05:00</p>
+              </div>
+            </div>
+            <div class="flex justify-between items-center pt-1">
+              <div class="flex items-center gap-2 font-medium">
+                <p class="py-2 px-4 border border-secondary leading-[1] rounded-full md:text-base md:px-5">4 000 ₽</p>
+              </div>
+              <button
+                class="font-bold expanded bg-secondary text-tertiary leading-[1] px-4 py-2 rounded-full border border-secondary hover:bg-white hover:border-white active:bg-primary active:border-secondary active:text-secondary md:text-base md:px-5">
+                Билеты
+              </button>
+            </div>
+          </div>
+          <div class="!flex flex-col gap-2.5 swiper-slide md:gap-3">
+            <div class="flex justify-between items-start">
+              <h3 class="font-medium text-2xl leading-[1] flex flex-col gap-1 md:font-[28px]">Пивной френдинг</h3>
+              <button>
+                <img class="w-[30px] h-[30px] hidden md:block" src="public/icons/Fill.svg" alt="стрелка" />
+              </button>
+            </div>
+            <div class="flex flex-col rounded-[10px] overflow-hidden">
+              <img
+                class="w-full rounded-t-[10px] md:h-[25vw] lg:h-[17vw]"
+                src="public/images/Rectangle_924.webp"
+                alt="рука с игровой карточкой" />
+              <div
+                class="flex justify-between items-center py-4 px-4.5 bg-secondary text-primary rounded-b-[10px] font-bold text-sm expanded md:text-base">
+                <p>23 февраля</p>
+                <p>15:00</p>
+              </div>
+            </div>
+            <div class="flex justify-between items-center pt-1">
+              <div class="flex items-center gap-2 font-medium">
+                <p class="py-2 px-4 border border-secondary leading-[1] rounded-full md:text-base md:px-5">2 450 ₽</p>
+              </div>
+              <button
+                class="font-bold expanded bg-secondary text-tertiary leading-[1] px-4 py-2 rounded-full border border-secondary hover:bg-white hover:border-white active:bg-primary active:border-secondary active:text-secondary md:text-base md:px-5">
+                Билеты
+              </button>
+            </div>
+          </div>
+          <div class="flex-col gap-2.5 swiper-slide !hidden md:!flex md:gap-3 js_slider_item">
+            <div class="flex justify-between items-start">
+              <h3 class="font-medium text-2xl leading-[1] flex flex-col gap-1 md:font-[28px]">Пивной френдинг</h3>
+              <button>
+                <img class="w-[30px] h-[30px] hidden md:block" src="public/icons/Fill.svg" alt="стрелка" />
+              </button>
+            </div>
+            <div class="flex flex-col rounded-[10px] overflow-hidden">
+              <img
+                class="w-full rounded-t-[10px] md:h-[25vw] lg:h-[17vw]"
+                src="public/images/Rectangle_924.webp"
+                alt="рука с игровой карточкой" />
+              <div
+                class="flex justify-between items-center py-4 px-4.5 bg-secondary text-primary rounded-b-[10px] font-bold text-sm expanded md:text-base">
+                <p>23 февраля</p>
+                <p>15:00</p>
+              </div>
+            </div>
+            <div class="flex justify-between items-center pt-1">
+              <div class="flex items-center gap-2 font-medium">
+                <p class="py-2 px-4 border border-secondary leading-[1] rounded-full md:text-base md:px-5">2 450 ₽</p>
+              </div>
+              <button
+                class="font-bold expanded bg-secondary text-tertiary leading-[1] px-4 py-2 rounded-full border border-secondary hover:bg-white hover:border-white active:bg-primary active:border-secondary active:text-secondary md:text-base md:px-5">
+                Билеты
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button
+        class="mt-7 font-bold expanded leadin-[0.8] flex items-center justify-center border border-secondary rounded-full h-[39px] w-[153px] mx-auto hover:bg-secondary hover:text-primary md:hidden js_slider_btn">
+        Загрузить еще
+      </button>
+      <div class="hidden md:flex gap-[30px] w-[110px] m-auto mt-10">
+        <button class="swiper-button-prev2">
+          <img class="w-10 h-10" src="public/icons/Sliderleft.svg" alt="иконка стрелка влево" />
+        </button>
+        <button class="swiper-button-next2">
+          <img class="w-10 h-10" src="public/icons/Slider.svg" alt="иконка стрелка вправо" />
+        </button>
+      </div>
+    </section>
+
+    <section class="bg-extra text-secondary pt-12 pb-[60px] px-2.5 md:py-[68px] md:px-4 md:pb-[85px] overflow-hidden">
+      <h2 class="font-bold expanded leading-[0.9] text-[32px] pb-[58px] md:text-[52px] md:pb-12 relative z-10">
+        Красивые <br />циферки
+      </h2>
+      <div class="relative">
+        <img
+          class="h-[20vw] absolute -left-3 top-1/2 -translate-y-1/2 z-0 hidden lg:block"
+          src="public/images/Group_511.webp"
+          alt="декоративный элемент" />
+        <img
+          class="w-[150vw] max-w-none absolute bottom-0 translate-y-1/3 z-0 left-1/2 -translate-x-1/2 lg:hidden"
+          src="public/images/Group_525.webp"
+          alt="декоративный элемент" />
+        <div class="lg:grid lg:grid-cols-2 gap-14 lg:w-fit lg:ml-auto relative z-10">
+          <div class="flex flex-col gap-2 max-w-[200px] md:max-w-[300px] md:gap-4 pb-12 lg:pb-0">
+            <p class="font-bold expanded leading-[0.9] text-[56px] md:text-[80px]">1 000</p>
+            <p class="expanded text-xs md:text-sm">Ты можешь быть самым стеснительным котиком в мире</p>
+          </div>
+          <div class="flex flex-col gap-2 max-w-[200px] md:max-w-[300px] md:gap-4 ml-auto pb-12 lg:pb-0 lg:ml-0">
+            <p class="font-bold expanded leading-[0.9] text-[56px] md:text-[80px]">736</p>
+            <p class="expanded text-xs md:text-sm">Ты можешь быть самым стеснительным котиком в мире</p>
+          </div>
+          <div class="flex flex-col gap-2 max-w-[200px] md:max-w-[300px] md:gap-4 pb-12 lg:pb-0">
+            <p class="font-bold expanded leading-[0.9] text-[56px] md:text-[80px]">2 706</p>
+            <p class="expanded text-xs md:text-sm">Ты можешь быть самым стеснительным котиком в мире</p>
+          </div>
+          <div class="flex flex-col gap-2 max-w-[200px] md:max-w-[300px] md:gap-4 ml-auto lg:ml-0">
+            <p class="font-bold expanded leading-[0.9] text-[56px] md:text-[80px]">67</p>
+            <p class="expanded text-xs md:text-sm">Ты можешь быть самым стеснительным котиком в мире</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lg:grid lg:grid-cols-2 bg-secondary text-primary py-12 px-2.5 md:py-[68px] md:px-5 lg:gap-25">
+      <div class="lg:sticky lg:top-[128px] h-auto self-start">
+        <h2 class="font-bold expanded text-[32px] leading-[0.9] pb-3 md:pb-10 md:text-[52px]">Вливайся</h2>
+        <p class="expanded text-xs pb-3 md:hidden">Наши вечеринки</p>
+        <div class="relative">
+          <div
+            class="flex flex-col gap-7 lg:grid lg:grid-cols-[auto_auto] lg:gap-0 lg:h-fit lg:flex-1 bg-secondary js_scroll_text">
+            <div>
+              <h3 class="font-medium text-xl py-2.5 leading-[1] mb-2 md:text-2xl md:py-0">Кисскотека</h3>
+              <img
+                class="bg-primary p-5 rounded-[10px] w-full lg:hidden mb-3"
+                src="public/images/Group_526.webp"
+                alt="баннер кисскотека" />
+              <p class="text-dark max-w-90">
+                Проект «Поцелуйный клуб» — это дейтинг-клуб, который устраивает яркие вечеринки, помогающие людям
+                знакомиться в приятной атмосфере, изучать собственную чувственность и находить «своих» людей.
+              </p>
+            </div>
+            <div class="flex items-center justify-between lg:flex-col lg:h-full lg:flex-1">
+              <button
+                class="font-bold expanded text-xs leading-[0.9] py-2 px-4 border border-primary rounded-full hover:bg-white hover:border-white active:bg-primary active:text-secondary active:border-primary md:text-sm">
+                Фотоотчеты
+              </button>
+              <button
+                class="font-bold expanded text-xs leading-[0.9] w-[140px] py-2 text-secondary bg-primary rounded-lg border border-primary hover:bg-white hover:text-primary hover:border-white active:bg-secondary active:border-primary md:text-sm">
+                Ближайшая <br />вечеринка
+              </button>
+            </div>
+          </div>
+          <div
+            class="flex flex-col gap-7 lg:grid-cols-[auto_auto] lg:gap-0 lg:h-fit lg:flex-1 bg-secondary lg:absolute lg:top-0 lg:hidden js_scroll_text lg:w-full">
+            <div class="h-fit">
+              <h3 class="font-medium text-xl py-2.5 leading-[1] mb-2 md:text-2xl md:py-0">101</h3>
+              <img
+                class="bg-primary p-5 rounded-[10px] w-full lg:hidden mb-3"
+                src="public/images/Group_526.webp"
+                alt="баннер кисскотека" />
+              <p class="text-dark max-w-90">
+                Проект «Поцелуйный клуб» — это дейтинг-клуб, который устраивает яркие вечеринки, помогающие людям
+                знакомиться в приятной атмосфере, изучать собственную чувственность и находить «своих» людей.
+              </p>
+            </div>
+            <div class="flex items-center justify-between lg:flex-col lg:h-full lg:flex-1">
+              <button
+                class="font-bold expanded text-xs leading-[0.9] py-2 px-4 border border-primary rounded-full hover:bg-white hover:border-white active:bg-primary active:text-secondary active:border-primary md:text-sm">
+                Фотоотчеты
+              </button>
+              <button
+                class="font-bold expanded text-xs leading-[0.9] w-[140px] py-2 text-secondary bg-primary rounded-lg border border-primary hover:bg-white hover:text-primary hover:border-white active:bg-secondary active:border-primary md:text-sm">
+                Ближайшая <br />вечеринка
+              </button>
+            </div>
+          </div>
+          <div
+            class="flex flex-col gap-7 lg:grid-cols-[auto_auto] lg:gap-0 lg:h-fit lg:flex-1 bg-secondary lg:absolute lg:top-0 lg:hidden js_scroll_text">
+            <div>
+              <h3 class="font-medium text-xl py-2.5 leading-[1] mb-2 md:text-2xl md:py-0">dfsdfd</h3>
+              <img
+                class="bg-primary p-5 rounded-[10px] w-full lg:hidden mb-3"
+                src="public/images/Group_526.webp"
+                alt="баннер кисскотека" />
+              <p class="text-dark max-w-90">
+                Проект «Поцелуйный клуб» — это дейтинг-клуб, который устраивает яркие вечеринки, помогающие людям
+                знакомиться в приятной атмосфере, изучать собственную чувственность и находить «своих» людей.
+              </p>
+            </div>
+            <div class="flex items-center justify-between lg:flex-col lg:h-full lg:flex-1">
+              <button
+                class="font-bold expanded text-xs leading-[0.9] py-2 px-4 border border-primary rounded-full hover:bg-white hover:border-white active:bg-primary active:text-secondary active:border-primary md:text-sm">
+                Фотоотчеты
+              </button>
+              <button
+                class="font-bold expanded text-xs leading-[0.9] w-[140px] py-2 text-secondary bg-primary rounded-lg border border-primary hover:bg-white hover:text-primary hover:border-white active:bg-secondary active:border-primary md:text-sm">
+                Ближайшая <br />вечеринка
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hidden lg:flex lg:flex-col lg:gap-5">
+        <img
+          class="snap-start js_scroll_image"
+          style="border-radius: 10px"
+          src="public/images/Frame_160.webp"
+          alt="баннер кисскотека" />
+        <img
+          class="snap-start js_scroll_image"
+          style="border-radius: 10px"
+          src="public/images/Frame_161.webp"
+          alt="баннер кисскотека" />
+        <img
+          class="snap-start js_scroll_image"
+          style="border-radius: 10px"
+          src="public/images/Frame_161.webp"
+          alt="баннер кисскотека" />
+      </div>
+    </section>
+
+    <section class="bg-dark text-secondary py-12 md:py-[68px]">
+      <h2 class="font-bold expanded text-[32px] text-center pb-10 leading-[0.9] md:text-[52px] md:pb-[75px]">
+        Наши гости <br />о нас
+      </h2>
+      <div class="swiper3 lg:w-[calc(90vw)]">
+        <div class="swiper-wrapper ml-2.5 lg:ml-[10vw]">
+          <div class="swiper-slide text-dark !flex flex-col ml-2.">
+            <div
+              class="flex gap-2.5 pt-5 pb-6 pr-4 pl-2.5 rounded-t-[10px] bg-white md:px-5 md:pt-5 md:pb-7 md:gap-4.5">
+              <img class="w-[50px] h-[50px] rounded-full md:w-15 md:h-15" src="public/images/Face.webp" alt="аватар" />
+              <div>
+                <p class="font-bold expanded text-[20px] pb-0.5">Наташа</p>
+                <p class="text-tertiary font-medium text-[10px] pb-2.5 md:text-sm">Была на вечеринке 3 раза</p>
+                <p class="expanded text-xs md:text-sm">
+                  Поцелуйный клуб — это дейтинг-клуб, который устраивает яркие вечеринки, помогающие людям знакомиться в
+                  приятной атмосфере, изучать собственную чувственность и находить «своих» людей.
+                </p>
+              </div>
+            </div>
+            <img
+              class="w-full h-4.5 object-cover rounded-b-[10px]"
+              src="public/images/Frame_46.webp"
+              alt="декоративный элемент" />
+          </div>
+          <div class="swiper-slide text-dark !flex flex-col">
+            <div
+              class="flex gap-2.5 pt-5 pb-6 pr-4 pl-2.5 rounded-t-[10px] bg-white md:px-5 md:pt-5 md:pb-7 md:gap-4.5">
+              <img class="w-[50px] h-[50px] rounded-full md:w-15 md:h-15" src="public/images/Face1.webp" alt="аватар" />
+              <div>
+                <p class="font-bold expanded text-[20px] pb-0.5">Егор</p>
+                <p class="text-tertiary font-medium text-[10px] pb-2.5 md:text-sm">Был на вечеринке 6 раз</p>
+                <p class="expanded text-xs md:text-sm">
+                  Проект «Поцелуйный клуб» — это дейтинг-клуб, который устраивает яркие вечеринки, помогающие людям
+                  знакомиться в приятной атмосфере.
+                </p>
+              </div>
+            </div>
+            <img
+              class="w-full h-4.5 object-cover rounded-b-[10px]"
+              src="public/images/Frame_463.webp"
+              alt="декоративный элемент" />
+          </div>
+          <div class="swiper-slide text-dark !flex flex-col">
+            <div
+              class="flex gap-2.5 pt-5 pb-6 pr-4 pl-2.5 rounded-t-[10px] bg-white md:px-5 md:pt-5 md:pb-7 md:gap-4.5">
+              <img class="w-[50px] h-[50px] rounded-full md:w-15 md:h-15" src="public/images/Face2.webp" alt="аватар" />
+              <div>
+                <p class="font-bold expanded text-[20px] pb-0.5">Аня</p>
+                <p class="text-tertiary font-medium text-[10px] pb-2.5 md:text-sm">Была на вечеринке 3 раза</p>
+                <p class="expanded text-xs md:text-sm">
+                  Наша главная фишка — игровые механики, которые помогают знакомиться и общаться. Ты можешь быть самым
+                  стеснительным котиком в мире, но мы все равно поможем тебе набраться смелости и сделать первый
+                  первый шаг.
+                </p>
+              </div>
+            </div>
+            <img
+              class="w-full h-4.5 object-cover rounded-b-[10px]"
+              src="public/images/Frame_46.webp"
+              alt="декоративный элемент" />
+          </div>
+          <div class="swiper-slide text-dark !flex flex-col">
+            <div
+              class="flex gap-2.5 pt-5 pb-6 pr-4 pl-2.5 rounded-t-[10px] bg-white md:px-5 md:pt-5 md:pb-7 md:gap-4.5">
+              <img class="w-[50px] h-[50px] rounded-full md:w-15 md:h-15" src="public/images/Face2.webp" alt="аватар" />
+              <div>
+                <p class="font-bold expanded text-[20px] pb-0.5">Аня</p>
+                <p class="text-tertiary font-medium text-[10px] pb-2.5 md:text-sm">Была на вечеринке 3 раза</p>
+                <p class="expanded text-xs md:text-sm">
+                  Наша главная фишка — игровые механики, которые помогают знакомиться и общаться. Ты можешь быть самым
+                  стеснительным котиком в мире, но мы все равно поможем тебе набраться смелости и сделать первый
+                  первый шаг.
+                </p>
+              </div>
+            </div>
+            <img
+              class="w-full h-4.5 object-cover rounded-b-[10px]"
+              src="public/images/Frame_46.webp"
+              alt="декоративный элемент" />
+          </div>
+          <div class="swiper-slide text-dark !flex flex-col">
+            <div
+              class="flex gap-2.5 pt-5 pb-6 pr-4 pl-2.5 rounded-t-[10px] bg-white md:px-5 md:pt-5 md:pb-7 md:gap-4.5">
+              <img class="w-[50px] h-[50px] rounded-full md:w-15 md:h-15" src="public/images/Face2.webp" alt="аватар" />
+              <div>
+                <p class="font-bold expanded text-[20px] pb-0.5">Аня</p>
+                <p class="text-tertiary font-medium text-[10px] pb-2.5 md:text-sm">Была на вечеринке 3 раза</p>
+                <p class="expanded text-xs md:text-sm">
+                  Наша главная фишка — игровые механики, которые помогают знакомиться и общаться. Ты можешь быть самым
+                  стеснительным котиком в мире, но мы все равно поможем тебе набраться смелости и сделать первый
+                  первый шаг.
+                </p>
+              </div>
+            </div>
+            <img
+              class="w-full h-4.5 object-cover rounded-b-[10px]"
+              src="public/images/Frame_46.webp"
+              alt="декоративный элемент" />
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center gap-5 m-auto w-[78px] pt-7 md:gap-[30px] md:pt-10">
+        <button aria-label="предыдущий слайд" class="swiper-button-prev3 w-fit">
+          <img
+            class="w-[30px] h-[30px] md:w-10 md:h-10 max-w-none max-h-none"
+            src="public/icons/arrow_L.svg"
+            alt="стрелка влево" />
+        </button>
+        <button aria-label="следующий слайд" class="swiper-button-next3">
+          <img
+            class="w-[30px] h-[30px] md:w-10 md:h-10 max-w-none max-h-none"
+            src="public/icons/arrow_R.svg"
+            alt="стрелка вправо" />
+        </button>
+      </div>
+    </section>
+
+    <section
+      class="bg-secondary text-extra py-12 px-2.5 grid grid-cols-3 gap-2.5 md:grid-cols-4 lg:grid-cols-5 lg:gap-10 lg:py-[68px] lg:px-[120px]">
+      <img src="public/images/Frame_44.webp" alt="декоративный элемент" />
+      <img src="public/images/Frame_441.webp" alt="декоративный элемент" />
+      <img src="public/images/Frame_44.webp" alt="декоративный элемент" />
+      <img src="public/images/Frame_442.webp" alt="декоративный элемент" />
+      <img src="public/images/Frame_44.webp" alt="декоративный элемент" />
+      <img src="public/images/Frame_443.webp" alt="декоративный элемент" />
+      <img class="md:hidden lg:block" src="public/images/Frame_44.webp" alt="декоративный элемент" />
+      <img class="hidden lg:block" src="public/images/Frame_445.webp" alt="декоративный элемент" />
+      <a
+        href="#"
+        class="font-bold text-xl leading-[0.9] text-extra flex items-center gap-5 col-span-2 ml-auto md:text-4xl">
+        <img
+          class="w-[38px] h-[38px] md:w-[60px] md:h-[60px]"
+          src="public/icons/Frame_170.svg"
+          alt="декоративный элемент" />
+        Смотреть <br />галерею
+      </a>
+    </section>
+
+    <footer
+      class="bg-gradient-to-b from-primary to-tertiary text-secondary pt-12 px-2.5 pb-14 text-center md:py-[90px] md:px-5 relative overflow-clip">
+      <img class="absolute w-full top-4 left-0 z-0 md:hidden" src="public/images/Group_545.svg" alt="декор" />
+      <img
+        class="absolute w-1/3 top-[100px] right-0 z-0 hidden md:block lg:w-1/5 lg:right-[4vw] xl:right-[calc((100vw-1200px)/2)]"
+        src="public/images/Group_546.svg"
+        alt="декор" />
+      <img
+        class="absolute w-1/3 top-10 left-0 z-0 hidden md:block lg:w-1/5 lg:left-[8vw] xl:left-[calc((100vw-1200px)/2)]"
+        src="public/images/Group_547.svg"
+        alt="декор" />
+      <h2
+        class="font-bold expanded leading-[0.93] text-[57px] break-words uppercase mb-[38px] md:leading-[1] md:text-[102px] md:mb-[74px] relative z-30">
+        Давайте <br />остава<br class="lg:hidden" />ться
+        <span class="block w-fit m-auto">
+          на <br class="lg:hidden" />связи
+          <img
+            class="absolute z-40 bottom-0 translate-y-3 left-1/2 -translate-x-1/2 w-[614зч] hidden md:block"
+            src="/public/images/Vector_3.svg"
+            alt="декор"
+        /></span>
+      </h2>
+      <div class="flex gap-3 md:gap-[73px] w-fit m-auto pb-[38px] md:pb-[63px] relative z-40">
+        <a class="font-medium text-xs flex gap-[5px] items-center md:text-xl md:gap-3" href="#">
+          <img class="w-3.5 h-3.5 md:w-6 md:h-6" src="public/icons/Telegram.svg" alt="иконка телеграм" />
+          Telegram</a
+        >
+        <a class="font-medium text-xs flex gap-[5px] items-center md:text-xl md:gap-3" href="#">
+          <img class="w-3.5 h-3.5 md:w-6 md:h-6" src="public/icons/Instagram.svg" alt="иконка инстаграм" />
+          Instagram</a
+        >
+      </div>
+      <form
+        class="flex flex-col gap-5 items-center px-5 w-full md:flex-row md:gap-10 m-auto md:w-fit md:px-0 relative z-40">
+        <p class="font-bold expanded text-base leading-[1] text-center md:text-left">
+          Подписывайтесь <br />на нашу рассылку
+        </p>
+        <input
+          class="bg-white text-tertiary font-medium text-base leading-[0.8] py-[15px] px-5 rounded-[10px] placeholder:text-tertiary placeholder:font-medium placeholder:text-base w-full md:max-w-[260px]"
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Ваша почта" />
+        <button
+          class="text-primary border border-secondary bg-secondary font-bold expanded text-base leading-[0.8] py-[15px] px-5 rounded-full hover:bg-white hover:border-white active:text-secondary active:border-secondary active:bg-transparent w-fit grow-0"
+          type="submit">
+          Отправить
+        </button>
+      </form>
+    </footer>
+
+    <script src="src/js/main.js"></script>
+    <script src="src/js/mainpage.js" type="module"></script>
+  </body>
+</html>

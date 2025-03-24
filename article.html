@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="ru" style="overflow-x: hidden">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="src/css/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <title>Document</title>
+  </head>
+  <body class="overflow-x-hidden font-halvar text-sm font-normal expanded">
+    <nav
+      class="z-50 left-0 right-0 bg-primary lg:flex lg:justify-between lg:py-3 lg:px-5 lg:items-start js_nav fixed top-0">
+      <div class="flex justify-between items-center pt-[14px] pb-4 px-2.5 bg-primary lg:p-0">
+        <div>
+          <img class="w-[120px] h-auto lg:w-auto lg:h-10" src="public/icons/Group_475.svg" alt="лого" />
+        </div>
+        <button aria-label="открыть мобильное меню" class="cursor-pointer js_nav_open_btn lg:hidden">
+          <img class="w-[30px] h-[30px]" src="public/icons/Frame_316.svg" alt="меню" />
+        </button>
+      </div>
+      <div
+        class="w-full h-dvh bg-[#151419] opacity-50 absolute top-0 js_nav_overlay scale-0 transition-opacity ease-linear duration-200 lg:hidden"></div>
+      <div
+        class="bg-primary flex flex-col gap-[43px] pt-[14px] absolute top-0 right-0 pl-[30px] max-w-[270px] translate-x-full h-dvh overflow-hidden transition-all ease-linear duration-200 js_nav_mob_menu lg:relative lg:h-auto lg:max-w-fit lg:translate-x-0 lg:pt-0 lg:pl-0">
+        <button aria-label="закрыть мобильное меню" class="cursor-pointer js_nav_close_btn lg:hidden">
+          <img class="w-auto h-[30px]" src="public/icons/Frame_290.svg" alt="меню" />
+        </button>
+        <div class="flex flex-col gap-5 lg:flex-row lg:gap-6 lg:py-4">
+          <div class="flex flex-col">
+            <button
+              class="cursor-pointer font-halvar font-medium text-2xl text-secondary flex gap-2 items-start js_navac_button leading-[0.8] lg:font-normal lg:text-sm">
+              О проекте
+              <img class="js_navac_icon lg:hidden" src="public/icons/Frame_29df0.svg" alt="открыть" />
+            </button>
+            <div
+              class="flex flex-col gap-1.5 max-h-0 overflow-hidden transition-all ease-linear duration-200 js_navac_content">
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary pt-3 js_nav_link text-sm lg:text-[10px] lg:pt-[14px]"
+                href="#"
+                >Визитка</a
+              >
+              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+                >Кому мы <br class="hidden lg:block" />помогаем</a
+              >
+              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+                >Цели/задачи/<br class="hidden lg:block" />миссия</a
+              >
+              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+                >Ценности</a
+              >
+              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+                >Правила</a
+              >
+              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+                >Как помочь?</a
+              >
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px] pb-1 lg:pb-0"
+                href="#"
+                >Юридическая <br class="hidden lg:block" />информация</a
+              >
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <button
+              class="cursor-pointer font-halvar font-medium text-2xl text-secondary flex gap-2 items-start js_navac_button leading-[0.8] lg:font-normal lg:text-sm">
+              Мероприятия
+              <img
+                class="js_navac_icon transition-all ease-linear duration-200 lg:hidden"
+                src="public/icons/Frame_29df0.svg"
+                alt="открыть" />
+            </button>
+            <div
+              class="flex flex-col gap-1.5 max-h-0 overflow-hidden transition-all ease-linear duration-200 js_navac_content">
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link pt-3 text-sm lg:text-[10px] lg:pt-[14px]"
+                href="#"
+                >Поцелуйный бар</a
+              >
+              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+                >Кисскотека</a
+              >
+              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+                >Правила</a
+              >
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link pb-1 text-sm lg:text-[10px] lg:pb-0"
+                href="#"
+                >FAQ</a
+              >
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <button
+              class="cursor-pointer font-halvar font-medium text-2xl text-secondary flex gap-2 items-start js_navac_button leading-[0.8] lg:font-normal lg:text-sm">
+              Тренинги
+              <img
+                class="js_navac_icon transition-all ease-linear duration-200 lg:hidden"
+                src="public/icons/Frame_29df0.svg"
+                alt="открыть" />
+            </button>
+            <div
+              class="flex flex-col gap-1.5 max-h-0 overflow-hidden transition-all ease-linear duration-200 js_navac_content">
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link pt-3 text-sm lg:text-[10px] lg:pt-[14px]"
+                href="#"
+                >Лекции</a
+              >
+              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+                >Мастер-<br class="hidden lg:block" />классы</a
+              >
+              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+                >Социальные <br class="hidden lg:block" />игры</a
+              >
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link pb-1 text-sm lg:text-[10px] lg:pb-0"
+                href="#"
+                >Календарь <br />мероприятий</a
+              >
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <button
+              class="cursor-pointer font-halvar font-medium text-2xl text-secondary flex gap-2 items-start js_navac_button text-left leading-[0.8] lg:font-normal lg:text-sm">
+              Счастливые <br class="lg:hidden" />
+              истории
+              <img
+                class="js_navac_icon transition-all ease-linear duration-200 lg:hidden"
+                src="public/icons/Frame_29df0.svg"
+                alt="открыть" />
+            </button>
+            <div
+              class="flex flex-col gap-1.5 max-h-0 overflow-hidden transition-all ease-linear duration-200 js_navac_content">
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link pt-3 text-sm lg:text-[10px] lg:pt-[14px]"
+                href="#"
+                >Большие интервью</a
+              >
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link pb-1 text-sm lg:text-[10px] lg:pb-0"
+                href="#"
+                >Отзывы участников</a
+              >
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <button
+              class="cursor-pointer font-halvar font-medium text-2xl text-secondary flex gap-2 items-start js_navac_button lg:font-normal lg:text-sm leading-[0.8]">
+              Участникам
+              <img
+                class="js_navac_icon transition-all ease-linear duration-200 lg:hidden"
+                src="public/icons/Frame_29df0.svg"
+                alt="открыть" />
+            </button>
+            <div
+              class="flex flex-col gap-1.5 max-h-0 overflow-hidden transition-all ease-linear duration-200 js_navac_content">
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link pt-3 text-sm lg:text-[10px] lg:pt-[14px]"
+                href="#"
+                >Куда пойти?</a
+              >
+              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+                >Программа <br />
+                лояльности</a
+              >
+              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+                >Вопросы <br class="hidden lg:block" />и ответы</a
+              >
+              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+                >Большие <br class="hidden lg:block" />интервью</a
+              >
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link pb-1 text-sm lg:text-[10px] lg:pb-0"
+                href="#"
+                >Отзывы <br class="hidden lg:block" />участников</a
+              >
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <button
+              class="cursor-pointer font-halvar font-medium text-2xl text-secondary flex gap-2 items-start js_navac_button leading-[0.8] lg:font-normal lg:text-sm">
+              База знаний
+              <img
+                class="js_navac_icon transition-all ease-linear duration-200 lg:hidden"
+                src="public/icons/Frame_29df0.svg"
+                alt="открыть" />
+            </button>
+            <div
+              class="flex flex-col gap-1.5 max-h-0 overflow-hidden transition-all ease-linear duration-200 js_navac_content">
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link pt-3 text-sm lg:text-[10px] lg:pt-[14px]"
+                href="#"
+                >Исследования</a
+              >
+              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+                >Альманах</a
+              >
+              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+                >Полезные статьи</a
+              >
+              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+                >Блог</a
+              >
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link pb-1 text-sm lg:text-[10px] lg:pb-0"
+                href="#"
+                >FAQ</a
+              >
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <a
+              href="#"
+              class="font-halvar font-medium text-2xl text-secondary flex gap-2 leading-[0.8] js_nav_link lg:font-normal lg:text-sm"
+              >Контакты</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section>
+      <div
+        class="bg-secondary text-primary px-2.5 pb-4 grid grid-cols-2 md:pb-10.5 lg:grid-cols-[1fr_1fr_4.6fr]lg:items-start lg:grid-rows-[auto_auto_auto_1fr] md:gap-x-6 lg:h-[50vw] pt-[88px] md:pt-[96px]">
+        <h1 class="col-span-2 font-bold expanded leading-[0.9] text-[32px] pb-2 md:text-[52px] md:pb-4">
+          Как стать <br />звездой <br />вечеринки:
+        </h1>
+        <h2 class="col-span-2 text-dark font-medium leading-[1] text-base pb-5 md:text-[28px] md:pb-4">
+          7 простых шагов <br />к успеху
+        </h2>
+        <img
+          class="rounded-lg col-span-2 lg:col-span-1 lg:col-start-3 lg:row-start-1 lg:row-end-5 aspect-[300/260] object-cover mb-3 lg:mb-0 lg:h-full lg:aspect-[777/454]"
+          src="public/images/Photo4.webp"
+          alt="фото" />
+        <p class="lg:col-span-2 font-medium text-[10px] self-center text-xs">07.03.2025</p>
+        <button
+          class="hidden justify-self-start self-end bg-primary text-white lg:flex gap-2 items-center font-medium leading-[1] text-xl py-2.5 px-[27px] rounded-full">
+          Читать
+          <img src="public/icons/Frame_299.svg" alt="иконка" />
+        </button>
+        <button
+          class="justify-self-end w-fit self-end ont-medium text-[10px] h-6 flex justify-center items-center bg-white px-3 rounded-full lg:bg-transparent md:text-base lg:h-10 lg:flex lg:items-center lg:underline lg:mr-8">
+          Другие статьи
+        </button>
+      </div>
+      <div class="bg-white px-2.5 pt-10 pb-14 text-dark lg:flex lg:gap-32 lg:px-[10vw] md:pt-[52px] md:pb-[64px]">
+        <div class="lg:h-full">
+          <h2 class="mb-6 font-bold expanded text-primary leading-[1] text-2xl md:text-[28px] md:pb-6">
+            Вечеринка — это твоя сцена, а ты — главный герой!
+          </h2>
+          <img class="w-[69vw] h-auto m-auto mb-7 lg:hidden" src="public/images/Group_527.webp" alt="иллюстрация" />
+          <div class="flex flex-col gap-4 font-graphik md:text-base">
+            <p>
+              Картина Карела Фабрициуса «Щегол» для одноименного романа Донны Тартт не просто красивая отсылка и даже
+              не сюжетный «макгаффин». Вокруг нее строится вся жизнь главного героя — мальчика по имени Тео, который
+              получил ее совершенно случайно. Это полотно определяет и его судьбу, и стиль книги, и ее систему образов
+              книги.
+            </p>
+            <p>
+              Какие же параллели между картиной и сюжетными линиями скрываются в романе? К каким еще произведениям нас
+              отсылает Донна Тартт? И почему она считает, что искусство необходимо человеку? Сейчас разберемся.
+            </p>
+          </div>
+        </div>
+        <img class="object-contain hidden lg:block lg:h-[35vw]" src="public/images/Group_527.webp" alt="иллюстрация" />
+      </div>
+      <div
+        class="bg-white px-2.5 pt-10 pb-22 text-dark lg:flex lg:gap-[100px] lg:flex-row-reverse lg:pr-[10vw] lg:pl-[5vw] md:pt-[52px] md:pb-[86px]">
+        <div class="lg:h-full">
+          <h2 class="mb-6 font-bold expanded text-primary leading-[1] text-2xl md:text-[28px] md:pb-6">
+            Будь уверен в себе
+          </h2>
+          <div class="pb-7 lg:hidden">
+            <img src="public/images/Photo3.webp" alt="фото" />
+            <p class="pt-2 font-graphik text-primary text-[10px] md:pt-3 md:text-xs">
+              Прямая походка, искренняя улыбка и дружелюбие сразу создают образ человека, с которым хочется общаться.
+            </p>
+          </div>
+          <div class="flex flex-col gap-4 font-graphik md:text-base">
+            <p>
+              Уверенность всегда притягивает взгляды. Прямая походка, искренняя улыбка и дружелюбие сразу создают образ
+              человека, с которым хочется общаться. Чем комфортнее ты себя чувствуешь, тем легче это передать другим!
+            </p>
+            <p>
+              Какие же параллели между картиной и сюжетными линиями скрываются в романе? К каким еще произведениям нас
+              отсылает Донна Тартт? И почему она считает, что искусство необходимо человеку? Сейчас разберемся.
+            </p>
+            <p>
+              Картина Карела Фабрициуса «Щегол» для одноименного романа Донны Тартт не просто красивая отсылка и даже
+              не сюжетный «макгаффин». Вокруг нее строится вся жизнь главного героя — мальчика по имени Тео, который
+              получил ее совершенно случайно. Это полотно определяет и его судьбу, и стиль книги, и ее систему образов
+              книги.
+            </p>
+          </div>
+        </div>
+        <div class="pb-7 hidden lg:block flex-none">
+          <img class="h-[23vw] aspect-[460/270]" src="public/images/Photo3.webp" alt="фото" />
+          <p class="pt-2 font-graphik text-primary text-[10px] md:pt-3 md:text-xs">
+            Прямая походка, искренняя улыбка и дружелюбие сразу создают образ человека, с которым хочется общаться.
+          </p>
+        </div>
+      </div>
+      <div class="bg-tertiary py-10 px-2.5 flex flex-col gap-2.5 md:py-14 md:flex-row lg:gap-5 lg:px-[16vw]">
+        <div class="bg-white pt-3 pb-5 px-2.5 rounded-md md:px-5 md:pt-4 md:pb-7">
+          <p
+            class="mb-3 w-[30px] h-[30px] rounded-full border-[1.5px] border-primary flex justify-center items-center fotn-bold expanded text-2xl text-primary md:w-10 md:h-10">
+            1
+          </p>
+          <p class="font-graphik text-sm md:text-base">
+            Уверенность всегда притягивает взгляды. Прямая походка, искренняя улыбка и дружелюбие сразу создают образ
+            человека, с которым хочется общаться. Чем комфортнее ты себя чувствуешь, тем легче это передать другим!
+          </p>
+        </div>
+        <div class="bg-white pt-3 pb-5 px-2.5 rounded-md md:px-5 md:pt-4 md:pb-7">
+          <p
+            class="mb-3 w-[30px] h-[30px] rounded-full border-[1.5px] border-primary flex justify-center items-center fotn-bold expanded text-2xl text-primary md:w-10 md:h-10">
+            1
+          </p>
+          <p class="font-graphik text-sm md:text-base">
+            Уверенность всегда притягивает взгляды. Прямая походка, искренняя улыбка и дружелюбие сразу создают образ
+            человека, с которым хочется общаться. Чем комфортнее ты себя чувствуешь, тем легче это передать другим!
+          </p>
+        </div>
+        <div class="bg-white pt-3 pb-5 px-2.5 rounded-md md:px-5 md:pt-4 md:pb-7">
+          <p
+            class="mb-3 w-[30px] h-[30px] rounded-full border-[1.5px] border-primary flex justify-center items-center fotn-bold expanded text-2xl text-primary md:w-10 md:h-10">
+            1
+          </p>
+          <p class="font-graphik text-sm md:text-base">
+            Уверенность всегда притягивает взгляды. Прямая походка, искренняя улыбка и дружелюбие сразу создают образ
+            человека, с которым хочется общаться. Чем комфортнее ты себя чувствуешь, тем легче это передать другим!
+          </p>
+        </div>
+      </div>
+      <div class="bg-white px-2.5 py-10 text-dark lg:flex lg:gap-10 lg:px-[10vw] md:pt-[52px] md:pb-[64px]">
+        <div class="lg:h-full">
+          <h2 class="mb-6 font-bold expanded text-primary leading-[1] text-2xl md:text-[28px] md:pb-6">
+            Выбери яркий наряд  
+          </h2>
+          <img class="h-auto m-auto mb-7 lg:hidden" src="public/images/Frame_322.webp" alt="иллюстрация" />
+          <div class="flex flex-col gap-4 font-graphik md:text-base">
+            <p>
+              Картина Карела Фабрициуса «Щегол» для одноименного романа Донны Тартт не просто красивая отсылка и даже
+              не сюжетный «макгаффин». Вокруг нее строится вся жизнь главного героя — мальчика по имени Тео, который
+              получил ее совершенно случайно. Это полотно определяет и его судьбу, и стиль книги, и ее систему образов
+              книги.
+            </p>
+            <p>
+              Какие же параллели между картиной и сюжетными линиями скрываются в романе? К каким еще произведениям нас
+              отсылает Донна Тартт? И почему она считает, что искусство необходимо человеку? Сейчас разберемся.
+            </p>
+          </div>
+        </div>
+        <img class="object-contain hidden lg:block lg:h-[25vw]" src="public/images/Frame_322.webp" alt="иллюстрация" />
+      </div>
+      <div
+        class="bg-white text-primary pt-1 pb-6 px-2.5 flex justify-between items-center md:py-8.5 lg:ml-[10vw] md:justify-start gap-12 font-medium text-xs leading-[1]">
+        <button class="flex items-center gap-2">
+          <img class="w-5 h-5" src="public/icons/bxs_share.svg" alt="иконка поделиться" /> Поделитья
+        </button>
+        <p>07.03.2025</p>
+      </div>
+    </section>
+
+    <section class="bg-secondary text-primary py-12 px-2.5 md:py-14 md:px-5">
+      <h2 class="font-bold expanded leading-[0.9] text-[32px] pb-9.5 md:text-[40px] md:leading-[1.1] md:pb-10">
+        Другие статьи
+      </h2>
+      <div class="flex flex-col gap-5 md:grid md:grid-cols-2 md:gap-10 lg:grid-cols-3">
+        <div>
+          <img
+            class="rounded-lg aspect-[300/180] object-cover mb-2 lg:aspect-[360/200]"
+            src="public/images/Rectangle 104.webp"
+            alt="фото" />
+          <h3 class="font-bold expanded leading-[1.1] text-xl pb-1.5">Как стать звездой вечеринки:</h3>
+          <p class="text-dark font-medium text-[10px] md:text-xs">29.02.2024</p>
+        </div>
+        <div>
+          <img
+            class="rounded-lg aspect-[300/180] object-cover mb-2 lg:aspect-[360/200]"
+            src="public/images/Rectangle__92.webp"
+            alt="фото" />
+          <h3 class="font-bold expanded leading-[1.1] text-xl pb-1.5">Как стать звездой вечеринки:</h3>
+          <p class="text-dark font-medium text-[10px] md:text-xs">29.02.2024</p>
+        </div>
+        <div>
+          <img
+            class="rounded-lg aspect-[300/180] object-cover mb-2 lg:aspect-[360/200]"
+            src="public/images/Rectangle92.webp"
+            alt="фото" />
+          <h3 class="font-bold expanded leading-[1.1] text-xl pb-1.5">Как стать звездой вечеринки:</h3>
+          <p class="text-dark font-medium text-[10px] md:text-xs">29.02.2024</p>
+        </div>
+        <div>
+          <img
+            class="rounded-lg aspect-[300/180] object-cover mb-2 lg:aspect-[360/200]"
+            src="public/images/Rectangle992.webp"
+            alt="фото" />
+          <h3 class="font-bold expanded leading-[1.1] text-xl pb-1.5">Как стать звездой вечеринки:</h3>
+          <p class="text-dark font-medium text-[10px] md:text-xs">29.02.2024</p>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      class="bg-gradient-to-b from-primary to-tertiary text-secondary pt-12 px-2.5 pb-14 text-center md:py-[90px] md:px-5 relative overflow-clip">
+      <img class="absolute w-full top-4 left-0 z-0 md:hidden" src="public/images/Group_545.svg" alt="декор" />
+      <img
+        class="absolute w-1/3 top-[100px] right-0 z-0 hidden md:block lg:w-1/5 lg:right-[4vw] xl:right-[calc((100vw-1200px)/2)]"
+        src="public/images/Group_546.svg"
+        alt="декор" />
+      <img
+        class="absolute w-1/3 top-10 left-0 z-0 hidden md:block lg:w-1/5 lg:left-[8vw] xl:left-[calc((100vw-1200px)/2)]"
+        src="public/images/Group_547.svg"
+        alt="декор" />
+      <h2
+        class="font-bold expanded leading-[0.93] text-[57px] break-words uppercase mb-[38px] md:leading-[1] md:text-[102px] md:mb-[74px] relative z-30">
+        Давайте <br />остава<br class="lg:hidden" />ться
+        <span class="block w-fit m-auto">
+          на <br class="lg:hidden" />связи
+          <img
+            class="absolute z-40 bottom-0 translate-y-3 left-1/2 -translate-x-1/2 w-[614зч] hidden md:block"
+            src="/public/images/Vector_3.svg"
+            alt="декор"
+        /></span>
+      </h2>
+      <div class="flex gap-3 md:gap-[73px] w-fit m-auto pb-[38px] md:pb-[63px] relative z-40">
+        <a class="font-medium text-xs flex gap-[5px] items-center md:text-xl md:gap-3" href="#">
+          <img class="w-3.5 h-3.5 md:w-6 md:h-6" src="public/icons/Telegram.svg" alt="иконка телеграм" />
+          Telegram</a
+        >
+        <a class="font-medium text-xs flex gap-[5px] items-center md:text-xl md:gap-3" href="#">
+          <img class="w-3.5 h-3.5 md:w-6 md:h-6" src="public/icons/Instagram.svg" alt="иконка инстаграм" />
+          Instagram</a
+        >
+      </div>
+      <form
+        class="flex flex-col gap-5 items-center px-5 w-full md:flex-row md:gap-10 m-auto md:w-fit md:px-0 relative z-40">
+        <p class="font-bold expanded text-base leading-[1] text-center md:text-left">
+          Подписывайтесь <br />на нашу рассылку
+        </p>
+        <input
+          class="bg-white text-tertiary font-medium text-base leading-[0.8] py-[15px] px-5 rounded-[10px] placeholder:text-tertiary placeholder:font-medium placeholder:text-base w-full md:max-w-[260px]"
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Ваша почта" />
+        <button
+          class="text-primary border border-secondary bg-secondary font-bold expanded text-base leading-[0.8] py-[15px] px-5 rounded-full hover:bg-white hover:border-white active:text-secondary active:border-secondary active:bg-transparent w-fit grow-0"
+          type="submit">
+          Отправить
+        </button>
+      </form>
+    </footer>
+
+    <script src="src/js/main.js"></script>
+  </body>
+</html>
