@@ -3744,6 +3744,16 @@
       height: 50vw;
     }
   }
+  .lg\:h-\[152px\] {
+    @media (width >= 64rem) {
+      height: 152px;
+    }
+  }
+  .lg\:h-\[200px\] {
+    @media (width >= 64rem) {
+      height: 200px;
+    }
+  }
   .lg\:h-auto {
     @media (width >= 64rem) {
       height: auto;
@@ -3905,6 +3915,11 @@
   .lg\:grid-cols-\[auto_auto\] {
     @media (width >= 64rem) {
       grid-template-columns: auto auto;
+    }
+  }
+  .lg\:grid-rows-\[auto\] {
+    @media (width >= 64rem) {
+      grid-template-rows: auto;
     }
   }
   .lg\:grid-rows-\[auto_auto_auto_1fr\] {
