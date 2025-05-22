@@ -2923,24 +2923,9 @@
       margin-top: calc(var(--spacing) * 3);
     }
   }
-  .md\:mt-\[clamp\(60px\,_5vw\,_10000px\)\] {
-    @media (width >= 48rem) {
-      margin-top: clamp(60px, 5vw, 10000px);
-    }
-  }
   .md\:mt-\[clamp\(60px\,_11vw\,_10000px\)\] {
     @media (width >= 48rem) {
       margin-top: clamp(60px, 11vw, 10000px);
-    }
-  }
-  .md\:mt-\[clamp\(60px\,_20vw\,_10000px\)\] {
-    @media (width >= 48rem) {
-      margin-top: clamp(60px, 20vw, 10000px);
-    }
-  }
-  .md\:mt-\[clamp\(100px\,_20vw\,_10000px\)\] {
-    @media (width >= 48rem) {
-      margin-top: clamp(100px, 20vw, 10000px);
     }
   }
   .md\:mb-2 {
@@ -3433,11 +3418,6 @@
       padding-top: calc(var(--spacing) * 10);
     }
   }
-  .md\:pt-14 {
-    @media (width >= 48rem) {
-      padding-top: calc(var(--spacing) * 14);
-    }
-  }
   .md\:pt-17 {
     @media (width >= 48rem) {
       padding-top: calc(var(--spacing) * 17);
@@ -3641,11 +3621,6 @@
   .md\:text-\[clamp\(24px\,_2vw\,_10000px\)\] {
     @media (width >= 48rem) {
       font-size: clamp(24px, 2vw, 10000px);
-    }
-  }
-  .md\:text-\[clamp\(24px\,_3vw\,_10000px\)\] {
-    @media (width >= 48rem) {
-      font-size: clamp(24px, 3vw, 10000px);
     }
   }
   .md\:text-\[clamp\(28px\,_2\.3vw\,_10000px\)\] {
@@ -4467,39 +4442,39 @@
 }
 @font-face {
   font-family: 'Graphik LCG';
-  src: url('/../public/fonts/GraphikLCG-Regular.woff2') format('woff2');
+  src: url('/../assets/fonts/GraphikLCG-Regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'Halvar';
-  src: url('/../public/fonts/HalvarBreit-Rg.woff2') format('woff2');
+  src: url('/../assets/fonts/HalvarBreit-Rg.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-stretch: expanded;
 }
 @font-face {
   font-family: 'Halvar';
-  src: url('/../public/fonts/HalvarBreit-Md.woff2') format('woff2');
+  src: url('/../assets/fonts/HalvarBreit-Md.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: 'Halvar';
-  src: url('/../public/fonts/HalvarBreit-Bd.woff2') format('woff2');
+  src: url('/../assets/fonts/HalvarBreit-Bd.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-stretch: expanded;
 }
 @font-face {
   font-family: 'Halvar';
-  src: url('/../public/fonts/HalvarBreit-XBd.woff2') format('woff2');
+  src: url('/../assets/fonts/HalvarBreit-XBd.woff2') format('woff2');
   font-weight: 800;
   font-style: normal;
 }
 @font-face {
   font-family: 'Halvar';
-  src: url('/../public/fonts/HalvarBreit-BdSlanted.woff2') format('woff2');
+  src: url('/../assets/fonts/HalvarBreit-BdSlanted.woff2') format('woff2');
   font-weight: 700;
   font-style: oblique;
 }

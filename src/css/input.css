@@ -81,7 +81,7 @@
 
 @font-face {
   font-family: 'Graphik LCG';
-  src: url('/../public/fonts/GraphikLCG-Regular.woff2') format('woff2');
+  src: url('/../assets/fonts/GraphikLCG-Regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
@@ -89,7 +89,7 @@
 /* expanded */
 @font-face {
   font-family: 'Halvar';
-  src: url('/../public/fonts/HalvarBreit-Rg.woff2') format('woff2');
+  src: url('/../assets/fonts/HalvarBreit-Rg.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-stretch: expanded;
@@ -98,7 +98,7 @@
 /* medium */
 @font-face {
   font-family: 'Halvar';
-  src: url('/../public/fonts/HalvarBreit-Md.woff2') format('woff2');
+  src: url('/../assets/fonts/HalvarBreit-Md.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
 }
@@ -106,7 +106,7 @@
 /* bold expanded */
 @font-face {
   font-family: 'Halvar';
-  src: url('/../public/fonts/HalvarBreit-Bd.woff2') format('woff2');
+  src: url('/../assets/fonts/HalvarBreit-Bd.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-stretch: expanded;
@@ -115,7 +115,7 @@
 /* extra bold */
 @font-face {
   font-family: 'Halvar';
-  src: url('/../public/fonts/HalvarBreit-XBd.woff2') format('woff2');
+  src: url('/../assets/fonts/HalvarBreit-XBd.woff2') format('woff2');
   font-weight: 800;
   font-style: normal;
 }
@@ -123,7 +123,7 @@
 /* bold slanted */
 @font-face {
   font-family: 'Halvar';
-  src: url('/../public/fonts/HalvarBreit-BdSlanted.woff2') format('woff2');
+  src: url('/../assets/fonts/HalvarBreit-BdSlanted.woff2') format('woff2');
   font-weight: 700;
   font-style: oblique;
 }
