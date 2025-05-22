@@ -36,7 +36,7 @@ function initSwiper() {
   if (screenWidth > 768) {
     swiper2 = new Swiper('.swiper2', {
       loop: true,
-      slidesPerView: 1,
+      slidesPerView: 2,
       spaceBetween: 40,
       grid: {
         rows: 1,

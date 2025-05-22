@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="src/css/output.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <meta property="og:title" content="Название вашей страницы" />
     <meta property="og:description" content="Краткое описание страницы, которое будет видно в предпросмотре ссылки." />
@@ -21,55 +22,76 @@
 
     <title>Document</title>
   </head>
-  <body class="overflow-x-hidden font-halvar text-sm font-normal expanded">
+  <body
+    class="overflow-x-hidden font-halvar text-[clamp(14px,_4.3vw,_10000px)] md:text-[clamp(14px,_1.1vw,_10000px)] font-normal expanded">
     <nav
-      class="z-50 left-0 right-0 bg-primary lg:flex lg:justify-between lg:py-3 lg:px-5 lg:items-start js_nav fixed top-0">
+      class="z-50 left-0 w-full bg-primary lg:flex lg:justify-between lg:py-3 lg:px-5 lg:items-start js_nav fixed top-0">
       <div class="flex justify-between items-center pt-[14px] pb-4 px-2.5 bg-primary lg:p-0">
         <div>
-          <img class="w-[120px] h-auto lg:w-auto lg:h-10" src="public/icons/Group_475.svg" alt="лого" />
+          <img
+            class="w-[clamp(120px,_33.3vw,_10000px)] h-auto lg:w-auto lg:h-[clamp(40px,_3.3vw,_10000px)]"
+            src="public/icons/Group_475.svg"
+            alt="лого" />
         </div>
         <button aria-label="открыть мобильное меню" class="cursor-pointer js_nav_open_btn lg:hidden">
-          <img class="w-[30px] h-[30px]" src="public/icons/Frame_316.svg" alt="меню" />
+          <img
+            class="w-[clamp(30px,_8.3vw,_10000px)] h-[clamp(30px,_8.3vw,_10000px)]"
+            src="public/icons/Frame_316.svg"
+            alt="меню" />
         </button>
       </div>
       <div
         class="w-full h-dvh bg-[#151419] opacity-50 absolute top-0 js_nav_overlay scale-0 transition-opacity ease-linear duration-200 lg:hidden"></div>
       <div
-        class="bg-primary flex flex-col gap-[43px] pt-[14px] absolute top-0 right-0 pl-[30px] max-w-[270px] translate-x-full h-dvh overflow-hidden transition-all ease-linear duration-200 js_nav_mob_menu lg:relative lg:h-auto lg:max-w-fit lg:translate-x-0 lg:pt-0 lg:pl-0">
+        class="bg-primary flex flex-col gap-[43px] pt-[14px] absolute top-0 right-0 pl-[30px] max-w-[clamp(270px,_75vw,_10000px)] translate-x-full h-dvh overflow-hidden transition-all ease-linear duration-200 js_nav_mob_menu lg:relative lg:h-auto lg:max-w-fit lg:translate-x-0 lg:pt-0 lg:pl-0">
         <button aria-label="закрыть мобильное меню" class="cursor-pointer js_nav_close_btn lg:hidden">
-          <img class="w-auto h-[30px]" src="public/icons/Frame_290.svg" alt="меню" />
+          <img class="w-auto h-[clamp(30px,_8.3vw,_10000px)]" src="public/icons/Frame_290.svg" alt="меню" />
         </button>
-        <div class="flex flex-col gap-5 lg:flex-row lg:gap-6 lg:py-4">
+        <div
+          class="flex flex-col gap-5 lg:flex-row lg:gap-6 lg:py-4 w-fit overflow-y-auto pb-5 md:pb-0 scrollbar-hidden">
           <div class="flex flex-col">
             <button
-              class="cursor-pointer font-halvar font-medium text-2xl text-secondary flex gap-2 items-start js_navac_button leading-[0.8] lg:font-normal lg:text-sm">
+              class="cursor-pointer font-halvar font-medium text-[clamp(24px,_7.5vw,_10000px)] text-secondary flex gap-2 items-start js_navac_button leading-[0.8] lg:font-normal lg:text-[clamp(12px,_1vw,_10000px)]">
               О проекте
-              <img class="js_navac_icon lg:hidden" src="public/icons/Frame_29df0.svg" alt="открыть" />
+              <img
+                class="js_navac_icon lg:hidden w-[clamp(16px,_4.4vw,_10000px)] h-[clamp(16px,_4.4vw,_10000px)]"
+                src="public/icons/Frame_29df0.svg"
+                alt="открыть" />
             </button>
             <div
-              class="flex flex-col gap-1.5 max-h-0 overflow-hidden transition-all ease-linear duration-200 js_navac_content">
+              class="flex flex-col gap-3 md:gap-1.5 max-h-0 overflow-hidden transition-all ease-linear duration-200 js_navac_content">
               <a
-                class="leading-[0.9] font-halvar expanded text-secondary pt-3 js_nav_link text-sm lg:text-[10px] lg:pt-[14px]"
+                class="leading-[0.9] font-halvar expanded text-secondary pt-3 js_nav_link text-[clamp(14px,_4.4vw,_10000px)] lg:text-[clamp(10px,_0.8vw,_10000px)] lg:pt-[14px]"
                 href="#"
                 >Визитка</a
               >
-              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-[clamp(14px,_4.4vw,_10000px)] lg:text-[clamp(10px,_0.8vw,_10000px)]"
+                href="#"
                 >Кому мы <br class="hidden lg:block" />помогаем</a
               >
-              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-[clamp(14px,_4.4vw,_10000px)] lg:text-[clamp(10px,_0.8vw,_10000px)]"
+                href="#"
                 >Цели/задачи/<br class="hidden lg:block" />миссия</a
               >
-              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-[clamp(14px,_4.4vw,_10000px)] lg:text-[clamp(10px,_0.8vw,_10000px)]"
+                href="#"
                 >Ценности</a
               >
-              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-[clamp(14px,_4.4vw,_10000px)] lg:text-[clamp(10px,_0.8vw,_10000px)]"
+                href="#"
                 >Правила</a
               >
-              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-[clamp(14px,_4.4vw,_10000px)] lg:text-[clamp(10px,_0.8vw,_10000px)]"
+                href="#"
                 >Как помочь?</a
               >
               <a
-                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px] pb-1 lg:pb-0"
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-[clamp(14px,_4.4vw,_10000px)] lg:text-[clamp(10px,_0.8vw,_10000px)] pb-1 lg:pb-0"
                 href="#"
                 >Юридическая <br class="hidden lg:block" />информация</a
               >
@@ -77,28 +99,32 @@
           </div>
           <div class="flex flex-col">
             <button
-              class="cursor-pointer font-halvar font-medium text-2xl text-secondary flex gap-2 items-start js_navac_button leading-[0.8] lg:font-normal lg:text-sm">
+              class="cursor-pointer font-halvar font-medium text-[clamp(24px,_7.5vw,_10000px)] text-secondary flex gap-2 items-start js_navac_button leading-[0.8] lg:font-normal lg:text-[clamp(12px,_1vw,_10000px)]">
               Мероприятия
               <img
-                class="js_navac_icon transition-all ease-linear duration-200 lg:hidden"
+                class="js_navac_icon lg:hidden w-[clamp(16px,_4.4vw,_10000px)] h-[clamp(16px,_4.4vw,_10000px)]"
                 src="public/icons/Frame_29df0.svg"
                 alt="открыть" />
             </button>
             <div
-              class="flex flex-col gap-1.5 max-h-0 overflow-hidden transition-all ease-linear duration-200 js_navac_content">
+              class="flex flex-col gap-3 md:gap-1.5 max-h-0 overflow-hidden transition-all ease-linear duration-200 js_navac_content">
               <a
-                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link pt-3 text-sm lg:text-[10px] lg:pt-[14px]"
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link pt-3 text-[clamp(14px,_4.4vw,_10000px)] lg:text-[clamp(10px,_0.8vw,_10000px)] lg:pt-[14px]"
                 href="#"
                 >Поцелуйный бар</a
               >
-              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-[clamp(14px,_4.4vw,_10000px)] lg:text-[clamp(10px,_0.8vw,_10000px)]"
+                href="#"
                 >Кисскотека</a
               >
-              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-[clamp(14px,_4.4vw,_10000px)] lg:text-[clamp(10px,_0.8vw,_10000px)]"
+                href="#"
                 >Правила</a
               >
               <a
-                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link pb-1 text-sm lg:text-[10px] lg:pb-0"
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link pb-1 text-[clamp(14px,_4.4vw,_10000px)] lg:text-[clamp(10px,_0.8vw,_10000px)] lg:pb-0"
                 href="#"
                 >FAQ</a
               >
@@ -106,28 +132,32 @@
           </div>
           <div class="flex flex-col">
             <button
-              class="cursor-pointer font-halvar font-medium text-2xl text-secondary flex gap-2 items-start js_navac_button leading-[0.8] lg:font-normal lg:text-sm">
+              class="cursor-pointer font-halvar font-medium text-[clamp(24px,_7.5vw,_10000px)] text-secondary flex gap-2 items-start js_navac_button leading-[0.8] lg:font-normal lg:text-[clamp(12px,_1vw,_10000px)]">
               Тренинги
               <img
-                class="js_navac_icon transition-all ease-linear duration-200 lg:hidden"
+                class="js_navac_icon lg:hidden w-[clamp(16px,_4.4vw,_10000px)] h-[clamp(16px,_4.4vw,_10000px)]"
                 src="public/icons/Frame_29df0.svg"
                 alt="открыть" />
             </button>
             <div
-              class="flex flex-col gap-1.5 max-h-0 overflow-hidden transition-all ease-linear duration-200 js_navac_content">
+              class="flex flex-col gap-3 md:gap-1.5 max-h-0 overflow-hidden transition-all ease-linear duration-200 js_navac_content">
               <a
-                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link pt-3 text-sm lg:text-[10px] lg:pt-[14px]"
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link pt-3 text-[clamp(14px,_4.4vw,_10000px)] lg:text-[clamp(10px,_0.8vw,_10000px)] lg:pt-[14px]"
                 href="#"
                 >Лекции</a
               >
-              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-[clamp(14px,_4.4vw,_10000px)] lg:text-[clamp(10px,_0.8vw,_10000px)]"
+                href="#"
                 >Мастер-<br class="hidden lg:block" />классы</a
               >
-              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-[clamp(14px,_4.4vw,_10000px)] lg:text-[clamp(10px,_0.8vw,_10000px)]"
+                href="#"
                 >Социальные <br class="hidden lg:block" />игры</a
               >
               <a
-                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link pb-1 text-sm lg:text-[10px] lg:pb-0"
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link pb-1 text-[clamp(14px,_4.4vw,_10000px)] lg:text-[clamp(10px,_0.8vw,_10000px)] lg:pb-0"
                 href="#"
                 >Календарь <br />мероприятий</a
               >
@@ -135,23 +165,23 @@
           </div>
           <div class="flex flex-col">
             <button
-              class="cursor-pointer font-halvar font-medium text-2xl text-secondary flex gap-2 items-start js_navac_button text-left leading-[0.8] lg:font-normal lg:text-sm">
+              class="cursor-pointer font-halvar font-medium text-[clamp(24px,_7.5vw,_10000px)] text-secondary flex gap-2 items-start js_navac_button text-left leading-[0.8] lg:font-normal lg:text-[clamp(12px,_1vw,_10000px)]">
               Счастливые <br class="lg:hidden" />
               истории
               <img
-                class="js_navac_icon transition-all ease-linear duration-200 lg:hidden"
+                class="js_navac_icon lg:hidden w-[clamp(16px,_4.4vw,_10000px)] h-[clamp(16px,_4.4vw,_10000px)]"
                 src="public/icons/Frame_29df0.svg"
                 alt="открыть" />
             </button>
             <div
-              class="flex flex-col gap-1.5 max-h-0 overflow-hidden transition-all ease-linear duration-200 js_navac_content">
+              class="flex flex-col gap-3 md:gap-1.5 max-h-0 overflow-hidden transition-all ease-linear duration-200 js_navac_content">
               <a
-                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link pt-3 text-sm lg:text-[10px] lg:pt-[14px]"
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link pt-3 text-[clamp(14px,_4.4vw,_10000px)] lg:text-[clamp(10px,_0.8vw,_10000px)] lg:pt-[14px]"
                 href="#"
                 >Большие интервью</a
               >
               <a
-                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link pb-1 text-sm lg:text-[10px] lg:pb-0"
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link pb-1 text-[clamp(14px,_4.4vw,_10000px)] lg:text-[clamp(10px,_0.8vw,_10000px)] lg:pb-0"
                 href="#"
                 >Отзывы участников</a
               >
@@ -159,32 +189,38 @@
           </div>
           <div class="flex flex-col">
             <button
-              class="cursor-pointer font-halvar font-medium text-2xl text-secondary flex gap-2 items-start js_navac_button lg:font-normal lg:text-sm leading-[0.8]">
+              class="cursor-pointer font-halvar font-medium text-[clamp(24px,_7.5vw,_10000px)] text-secondary flex gap-2 items-start js_navac_button lg:font-normal lg:text-[clamp(12px,_1vw,_10000px)] leading-[0.8]">
               Участникам
               <img
-                class="js_navac_icon transition-all ease-linear duration-200 lg:hidden"
+                class="js_navac_icon lg:hidden w-[clamp(16px,_4.4vw,_10000px)] h-[clamp(16px,_4.4vw,_10000px)]"
                 src="public/icons/Frame_29df0.svg"
                 alt="открыть" />
             </button>
             <div
-              class="flex flex-col gap-1.5 max-h-0 overflow-hidden transition-all ease-linear duration-200 js_navac_content">
+              class="flex flex-col gap-3 md:gap-1.5 max-h-0 overflow-hidden transition-all ease-linear duration-200 js_navac_content">
               <a
-                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link pt-3 text-sm lg:text-[10px] lg:pt-[14px]"
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link pt-3 text-[clamp(14px,_4.4vw,_10000px)] lg:text-[clamp(10px,_0.8vw,_10000px)] lg:pt-[14px]"
                 href="#"
                 >Куда пойти?</a
               >
-              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-[clamp(14px,_4.4vw,_10000px)] lg:text-[clamp(10px,_0.8vw,_10000px)]"
+                href="#"
                 >Программа <br />
                 лояльности</a
               >
-              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-[clamp(14px,_4.4vw,_10000px)] lg:text-[clamp(10px,_0.8vw,_10000px)]"
+                href="#"
                 >Вопросы <br class="hidden lg:block" />и ответы</a
               >
-              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-[clamp(14px,_4.4vw,_10000px)] lg:text-[clamp(10px,_0.8vw,_10000px)]"
+                href="#"
                 >Большие <br class="hidden lg:block" />интервью</a
               >
               <a
-                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link pb-1 text-sm lg:text-[10px] lg:pb-0"
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link pb-1 text-[clamp(14px,_4.4vw,_10000px)] lg:text-[clamp(10px,_0.8vw,_10000px)] lg:pb-0"
                 href="#"
                 >Отзывы <br class="hidden lg:block" />участников</a
               >
@@ -192,31 +228,37 @@
           </div>
           <div class="flex flex-col">
             <button
-              class="cursor-pointer font-halvar font-medium text-2xl text-secondary flex gap-2 items-start js_navac_button leading-[0.8] lg:font-normal lg:text-sm">
+              class="cursor-pointer font-halvar font-medium text-[clamp(24px,_7.5vw,_10000px)] text-secondary flex gap-2 items-start js_navac_button leading-[0.8] lg:font-normal lg:text-[clamp(12px,_1vw,_10000px)]">
               База знаний
               <img
-                class="js_navac_icon transition-all ease-linear duration-200 lg:hidden"
+                class="js_navac_icon lg:hidden w-[clamp(16px,_4.4vw,_10000px)] h-[clamp(16px,_4.4vw,_10000px)]"
                 src="public/icons/Frame_29df0.svg"
                 alt="открыть" />
             </button>
             <div
-              class="flex flex-col gap-1.5 max-h-0 overflow-hidden transition-all ease-linear duration-200 js_navac_content">
+              class="flex flex-col gap-3 md:gap-1.5 max-h-0 overflow-hidden transition-all ease-linear duration-200 js_navac_content">
               <a
-                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link pt-3 text-sm lg:text-[10px] lg:pt-[14px]"
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link pt-3 text-[clamp(14px,_4.4vw,_10000px)] lg:text-[clamp(10px,_0.8vw,_10000px)] lg:pt-[14px]"
                 href="#"
                 >Исследования</a
               >
-              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-[clamp(14px,_4.4vw,_10000px)] lg:text-[clamp(10px,_0.8vw,_10000px)]"
+                href="#"
                 >Альманах</a
               >
-              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-[clamp(14px,_4.4vw,_10000px)] lg:text-[clamp(10px,_0.8vw,_10000px)]"
+                href="#"
                 >Полезные статьи</a
               >
-              <a class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-sm lg:text-[10px]" href="#"
+              <a
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link text-[clamp(14px,_4.4vw,_10000px)] lg:text-[clamp(10px,_0.8vw,_10000px)]"
+                href="#"
                 >Блог</a
               >
               <a
-                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link pb-1 text-sm lg:text-[10px] lg:pb-0"
+                class="leading-[0.9] font-halvar expanded text-secondary js_nav_link pb-1 text-[clamp(14px,_4.4vw,_10000px)] lg:text-[clamp(10px,_0.8vw,_10000px)] lg:pb-0"
                 href="#"
                 >FAQ</a
               >
@@ -225,7 +267,7 @@
           <div class="flex flex-col">
             <a
               href="#"
-              class="font-halvar font-medium text-2xl text-secondary flex gap-2 leading-[0.8] js_nav_link lg:font-normal lg:text-sm"
+              class="font-halvar font-medium text-[clamp(24px,_7.5vw,_10000px)] text-secondary flex gap-2 leading-[0.8] js_nav_link lg:font-normal lg:text-[clamp(12px,_1vw,_10000px)]"
               >Контакты</a
             >
           </div>
@@ -235,35 +277,52 @@
 
     <section>
       <div
-        class="bg-secondary text-primary px-2.5 pb-4 grid grid-cols-2 md:pb-10.5 lg:grid-cols-[1fr_1fr_4.6fr]lg:items-start lg:grid-rows-[auto_auto_auto_1fr] md:gap-x-6 lg:h-[50vw] pt-[88px] md:pt-[96px]">
-        <h1 class="col-span-2 font-bold expanded leading-[0.9] text-[32px] pb-2 md:text-[52px] md:pb-4">
+        class="bg-secondary text-primary px-2.5 pb-4 grid grid-cols-2 md:pb-10.5 lg:grid-cols-[1fr_1fr_3.3fr] lg:items-start lg:grid-rows-[auto_auto_auto_1fr] md:gap-x-6 lg:h-[50vw] pt-[clamp(30px,_9vw,_10000px)] lg:max-h-dvh lg:pt-14 md:pt-[clamp(56px,_4vw,_10000px)] mt-[60px] md:mt-[clamp(60px,_11vw,_10000px)] lg:mt-[60px]">
+        <h1
+          data-aos="fade-right"
+          class="col-span-2 font-bold expanded leading-[0.9] text-[clamp(32px,_10vw,_10000px)] pb-2 md:text-[clamp(52px,_4.3vw,_10000px)] md:pb-4">
           Как стать <br />звездой <br />вечеринки:
         </h1>
-        <h2 class="col-span-2 text-dark font-medium leading-[1] text-base pb-5 md:text-[28px] md:pb-4">
+        <h2
+          data-aos="fade-right"
+          class="col-span-2 text-dark font-medium leading-[1] text-[clamp(16px,_5vw,_10000px)] pb-5 md:text-[clamp(28px,_2.3vw,_10000px)] md:pb-4">
           7 простых шагов <br />к успеху
         </h2>
         <img
+          data-aos="fade-left"
           class="rounded-lg col-span-2 lg:col-span-1 lg:col-start-3 lg:row-start-1 lg:row-end-5 aspect-[300/260] object-cover mb-3 lg:mb-0 lg:h-full lg:aspect-[777/454]"
           src="public/images/Photo4.webp"
           alt="фото" />
-        <p class="lg:col-span-2 font-medium text-[10px] self-center text-xs">07.03.2025</p>
-        <button
-          class="hidden justify-self-start self-end bg-primary text-white lg:flex gap-2 items-center font-medium leading-[1] text-xl py-2.5 px-[27px] rounded-full">
+        <p
+          data-aos="fade-right"
+          class="col-span-2 font-medium self-center text-[clamp(12px,_3.7vw,_10000px)] md:text-[clamp(12px,_1vw,_10000px)] text-dark pt-4">
+          Описание описание описание описание
+        </p>
+        <!-- <button
+          data-aos="fade-right"
+          class="hidden justify-self-start self-end bg-primary text-white lg:flex gap-2 items-center font-medium leading-[1] text-[20px] py-2.5 px-[27px] rounded-full">
           Читать
           <img src="public/icons/Frame_299.svg" alt="иконка" />
-        </button>
-        <button
-          class="justify-self-end w-fit self-end ont-medium text-[10px] h-6 flex justify-center items-center bg-white px-3 rounded-full lg:bg-transparent md:text-base lg:h-10 lg:flex lg:items-center lg:underline lg:mr-8">
+        </button> -->
+        <!-- <button
+          data-aos="fade-right"
+          class="justify-self-end w-fit self-end ont-medium text-[clamp(12px,_3.7vw,_10000px)] h-[clamp(24px,_6.7vw,_10000px)] flex justify-center items-center bg-white px-[clamp(12px,_3.3vw,_10000px)] rounded-full lg:bg-transparent md:text-[clamp(16px,_1.3vw,_10000px)] lg:h-10 lg:flex lg:items-center lg:underline lg:mr-8">
           Другие статьи
-        </button>
+        </button> -->
       </div>
       <div class="bg-white px-2.5 pt-10 pb-14 text-dark lg:flex lg:gap-32 lg:px-[10vw] md:pt-[52px] md:pb-[64px]">
         <div class="lg:h-full">
-          <h2 class="mb-6 font-bold expanded text-primary leading-[1] text-2xl md:text-[28px] md:pb-6">
+          <h2
+            data-aos="fade-right"
+            class="mb-6 font-bold expanded text-primary leading-[1] text-[clamp(24px,_7.5vw,_10000px)] md:text-[clamp(28px,_2.3vw,_10000px)] md:pb-6">
             Вечеринка — это твоя сцена, а ты — главный герой!
           </h2>
-          <img class="w-[69vw] h-auto m-auto mb-7 lg:hidden" src="public/images/Group_527.webp" alt="иллюстрация" />
-          <div class="flex flex-col gap-4 font-graphik md:text-base">
+          <img
+            data-aos="fade-left"
+            class="w-[69vw] h-auto m-auto mb-7 lg:hidden"
+            src="public/images/Group_527.webp"
+            alt="иллюстрация" />
+          <div data-aos="fade-right" class="flex flex-col gap-4 font-graphik md:text-[clamp(16px,_1.3vw,_10000px)]">
             <p>
               Картина Карела Фабрициуса «Щегол» для одноименного романа Донны Тартт не просто красивая отсылка и даже
               не сюжетный «макгаффин». Вокруг нее строится вся жизнь главного героя — мальчика по имени Тео, который
@@ -276,21 +335,28 @@
             </p>
           </div>
         </div>
-        <img class="object-contain hidden lg:block lg:h-[35vw]" src="public/images/Group_527.webp" alt="иллюстрация" />
+        <img
+          data-aos="fade-left"
+          class="object-contain hidden lg:block lg:h-[35vw]"
+          src="public/images/Group_527.webp"
+          alt="иллюстрация" />
       </div>
       <div
         class="bg-white px-2.5 pt-10 pb-22 text-dark lg:flex lg:gap-[100px] lg:flex-row-reverse lg:pr-[10vw] lg:pl-[5vw] md:pt-[52px] md:pb-[86px]">
         <div class="lg:h-full">
-          <h2 class="mb-6 font-bold expanded text-primary leading-[1] text-2xl md:text-[28px] md:pb-6">
+          <h2
+            data-aos="fade-left"
+            class="mb-6 font-bold expanded text-primary leading-[1] text-[clamp(24px,_7.5vw,_10000px)] md:text-[clamp(28px,_2.3vw,_10000px)] md:pb-6">
             Будь уверен в себе
           </h2>
-          <div class="pb-7 lg:hidden">
+          <div data-aos="fade-right" class="pb-7 lg:hidden">
             <img src="public/images/Photo3.webp" alt="фото" />
-            <p class="pt-2 font-graphik text-primary text-[10px] md:pt-3 md:text-xs">
+            <p
+              class="pt-2 font-graphik text-primary text-[clamp(12px,_3.7vw,_10000px)] md:pt-3 md:text-[clamp(12px,_1vw,_10000px)]">
               Прямая походка, искренняя улыбка и дружелюбие сразу создают образ человека, с которым хочется общаться.
             </p>
           </div>
-          <div class="flex flex-col gap-4 font-graphik md:text-base">
+          <div data-aos="fade-left" class="flex flex-col gap-4 font-graphik md:text-[clamp(16px,_1.3vw,_10000px)]">
             <p>
               Уверенность всегда притягивает взгляды. Прямая походка, искренняя улыбка и дружелюбие сразу создают образ
               человека, с которым хочется общаться. Чем комфортнее ты себя чувствуешь, тем легче это передать другим!
@@ -307,40 +373,42 @@
             </p>
           </div>
         </div>
-        <div class="pb-7 hidden lg:block flex-none">
+        <div data-aos="fade-right" class="pb-7 hidden lg:block flex-none">
           <img class="h-[23vw] aspect-[460/270]" src="public/images/Photo3.webp" alt="фото" />
-          <p class="pt-2 font-graphik text-primary text-[10px] md:pt-3 md:text-xs">
-            Прямая походка, искренняя улыбка и дружелюбие сразу создают образ человека, с которым хочется общаться.
+          <p
+            class="pt-2 font-graphik text-primary text-[clamp(12px,_3.7vw,_10000px)] md:pt-3 md:text-[clamp(12px,_1vw,_10000px)]">
+            Прямая походка, искренняя улыбка и дружелюбие сразу создают <br />образ человека, с которым хочется
+            общаться.
           </p>
         </div>
       </div>
       <div class="bg-tertiary py-10 px-2.5 flex flex-col gap-2.5 md:py-14 md:flex-row lg:gap-5 lg:px-[16vw]">
-        <div class="bg-white pt-3 pb-5 px-2.5 rounded-md md:px-5 md:pt-4 md:pb-7">
+        <div data-aos="fade-up" class="bg-white pt-3 pb-5 px-2.5 rounded-md md:px-5 md:pt-4 md:pb-7">
           <p
-            class="mb-3 w-[30px] h-[30px] rounded-full border-[1.5px] border-primary flex justify-center items-center fotn-bold expanded text-2xl text-primary md:w-10 md:h-10">
+            class="mb-3 w-[clamp(30px,_8.3vw,_10000px)] h-[clamp(30px,_8.3vw,_10000px)] rounded-full border-[1.5px] border-primary flex justify-center items-center fotn-bold expanded text-[clamp(24px,_7.5vw,_10000px)] md:text-[24px] text-primary md:w-10 md:h-10">
             1
           </p>
-          <p class="font-graphik text-sm md:text-base">
+          <p class="font-graphik text-[clamp(14px,_4.4vw,_10000px)] md:text-[clamp(16px,_1.3vw,_10000px)]">
             Уверенность всегда притягивает взгляды. Прямая походка, искренняя улыбка и дружелюбие сразу создают образ
             человека, с которым хочется общаться. Чем комфортнее ты себя чувствуешь, тем легче это передать другим!
           </p>
         </div>
-        <div class="bg-white pt-3 pb-5 px-2.5 rounded-md md:px-5 md:pt-4 md:pb-7">
+        <div data-aos="fade-up" class="bg-white pt-3 pb-5 px-2.5 rounded-md md:px-5 md:pt-4 md:pb-7">
           <p
-            class="mb-3 w-[30px] h-[30px] rounded-full border-[1.5px] border-primary flex justify-center items-center fotn-bold expanded text-2xl text-primary md:w-10 md:h-10">
+            class="mb-3 w-[clamp(30px,_8.3vw,_10000px)] h-[clamp(30px,_8.3vw,_10000px)] rounded-full border-[1.5px] border-primary flex justify-center items-center fotn-bold expanded text-[clamp(24px,_7.5vw,_10000px)] md:text-[24px] text-primary md:w-10 md:h-10">
             1
           </p>
-          <p class="font-graphik text-sm md:text-base">
+          <p class="font-graphik text-[clamp(14px,_4.4vw,_10000px)] md:text-[clamp(16px,_1.3vw,_10000px)]">
             Уверенность всегда притягивает взгляды. Прямая походка, искренняя улыбка и дружелюбие сразу создают образ
             человека, с которым хочется общаться. Чем комфортнее ты себя чувствуешь, тем легче это передать другим!
           </p>
         </div>
-        <div class="bg-white pt-3 pb-5 px-2.5 rounded-md md:px-5 md:pt-4 md:pb-7">
+        <div data-aos="fade-up" class="bg-white pt-3 pb-5 px-2.5 rounded-md md:px-5 md:pt-4 md:pb-7">
           <p
-            class="mb-3 w-[30px] h-[30px] rounded-full border-[1.5px] border-primary flex justify-center items-center fotn-bold expanded text-2xl text-primary md:w-10 md:h-10">
+            class="mb-3 w-[clamp(30px,_8.3vw,_10000px)] h-[clamp(30px,_8.3vw,_10000px)] rounded-full border-[1.5px] border-primary flex justify-center items-center fotn-bold expanded text-[clamp(24px,_7.5vw,_10000px)] md:text-[24px] text-primary md:w-10 md:h-10">
             1
           </p>
-          <p class="font-graphik text-sm md:text-base">
+          <p class="font-graphik text-[clamp(14px,_4.4vw,_10000px)] md:text-[clamp(16px,_1.3vw,_10000px)]">
             Уверенность всегда притягивает взгляды. Прямая походка, искренняя улыбка и дружелюбие сразу создают образ
             человека, с которым хочется общаться. Чем комфортнее ты себя чувствуешь, тем легче это передать другим!
           </p>
@@ -348,11 +416,17 @@
       </div>
       <div class="bg-white px-2.5 py-10 text-dark lg:flex lg:gap-10 lg:px-[10vw] md:pt-[52px] md:pb-[64px]">
         <div class="lg:h-full">
-          <h2 class="mb-6 font-bold expanded text-primary leading-[1] text-2xl md:text-[28px] md:pb-6">
+          <h2
+            data-aos="fade-right"
+            class="mb-6 font-bold expanded text-primary leading-[1] text-[clamp(24px,_7.5vw,_10000px)] md:text-[clamp(28px,_2.3vw,_10000px)] md:pb-6">
             Выбери яркий наряд  
           </h2>
-          <img class="h-auto m-auto mb-7 lg:hidden" src="public/images/Frame_322.webp" alt="иллюстрация" />
-          <div class="flex flex-col gap-4 font-graphik md:text-base">
+          <img
+            data-aos="fade-left"
+            class="h-auto m-auto mb-7 lg:hidden"
+            src="public/images/Frame_322.webp"
+            alt="иллюстрация" />
+          <div data-aos="fade-right" class="flex flex-col gap-4 font-graphik md:text-[clamp(16px,_1.3vw,_10000px)]">
             <p>
               Картина Карела Фабрициуса «Щегол» для одноименного романа Донны Тартт не просто красивая отсылка и даже
               не сюжетный «макгаффин». Вокруг нее строится вся жизнь главного героя — мальчика по имени Тео, который
@@ -365,53 +439,83 @@
             </p>
           </div>
         </div>
-        <img class="object-contain hidden lg:block lg:h-[25vw]" src="public/images/Frame_322.webp" alt="иллюстрация" />
+        <img
+          data-aos="fade-left"
+          class="object-contain hidden lg:block lg:h-[25vw]"
+          src="public/images/Frame_322.webp"
+          alt="иллюстрация" />
       </div>
       <div
-        class="bg-white text-primary pt-1 pb-6 px-2.5 flex justify-between items-center md:py-8.5 lg:ml-[10vw] md:justify-start gap-12 font-medium text-xs leading-[1]">
+        class="bg-white text-primary pt-1 pb-6 px-2.5 flex justify-between items-center md:py-8.5 lg:ml-[10vw] md:justify-start gap-12 font-medium text-[clamp(12px,_3.7vw,_10000px)] md:text-[clamp(12px,_1vw,_10000px)] leading-[1]">
         <button class="flex items-center gap-2">
-          <img class="w-5 h-5" src="public/icons/bxs_share.svg" alt="иконка поделиться" /> Поделитья
+          <img
+            class="w-[clamp(20px,_6.2vw,_10000px)] h-[clamp(20px,_6.2vw,_10000px)] md:w-[clamp(20px,_1.7vw,_10000px)] md:h-[clamp(20px,_1.7vw,_10000px)]"
+            src="public/icons/bxs_share.svg"
+            alt="иконка поделиться" />
+          Поделитья
         </button>
         <p>07.03.2025</p>
       </div>
     </section>
 
     <section class="bg-secondary text-primary py-12 px-2.5 md:py-14 md:px-5">
-      <h2 class="font-bold expanded leading-[0.9] text-[32px] pb-9.5 md:text-[40px] md:leading-[1.1] md:pb-10">
+      <h2
+        data-aos="fade-right"
+        class="font-bold expanded leading-[0.9] text-[clamp(32px,_10vw,_10000px)] pb-9.5 md:text-[clamp(40px,_3.3vw,_10000px)] md:leading-[1.1] md:pb-10">
         Другие статьи
       </h2>
       <div class="flex flex-col gap-5 md:grid md:grid-cols-2 md:gap-10 lg:grid-cols-3">
-        <div>
+        <div data-aos="fade-up">
           <img
             class="rounded-lg aspect-[300/180] object-cover mb-2 lg:aspect-[360/200]"
             src="public/images/Rectangle 104.webp"
             alt="фото" />
-          <h3 class="font-bold expanded leading-[1.1] text-xl pb-1.5">Как стать звездой вечеринки:</h3>
-          <p class="text-dark font-medium text-[10px] md:text-xs">29.02.2024</p>
+          <h3
+            class="font-bold expanded leading-[1.1] text-[clamp(20px,_6.2vw,_10000px)] md:text-[clamp(20px,_1.7vw,_10000px)] pb-1.5">
+            Как стать звездой вечеринки:
+          </h3>
+          <p class="text-dark font-medium text-[clamp(12px,_3.7vw,_10000px)] md:text-[clamp(12px,_1vw,_10000px)]">
+            29.02.2024
+          </p>
         </div>
-        <div>
+        <div data-aos="fade-up">
           <img
             class="rounded-lg aspect-[300/180] object-cover mb-2 lg:aspect-[360/200]"
             src="public/images/Rectangle__92.webp"
             alt="фото" />
-          <h3 class="font-bold expanded leading-[1.1] text-xl pb-1.5">Как стать звездой вечеринки:</h3>
-          <p class="text-dark font-medium text-[10px] md:text-xs">29.02.2024</p>
+          <h3
+            class="font-bold expanded leading-[1.1] text-[clamp(20px,_6.2vw,_10000px)] md:text-[clamp(20px,_1.7vw,_10000px)] pb-1.5">
+            Как стать звездой вечеринки:
+          </h3>
+          <p class="text-dark font-medium text-[clamp(12px,_3.7vw,_10000px)] md:text-[clamp(12px,_1vw,_10000px)]">
+            29.02.2024
+          </p>
         </div>
-        <div>
+        <div data-aos="fade-up">
           <img
             class="rounded-lg aspect-[300/180] object-cover mb-2 lg:aspect-[360/200]"
             src="public/images/Rectangle92.webp"
             alt="фото" />
-          <h3 class="font-bold expanded leading-[1.1] text-xl pb-1.5">Как стать звездой вечеринки:</h3>
-          <p class="text-dark font-medium text-[10px] md:text-xs">29.02.2024</p>
+          <h3
+            class="font-bold expanded leading-[1.1] text-[clamp(20px,_6.2vw,_10000px)] md:text-[clamp(20px,_1.7vw,_10000px)] pb-1.5">
+            Как стать звездой вечеринки:
+          </h3>
+          <p class="text-dark font-medium text-[clamp(12px,_3.7vw,_10000px)] md:text-[clamp(12px,_1vw,_10000px)]">
+            29.02.2024
+          </p>
         </div>
-        <div>
+        <div data-aos="fade-up">
           <img
             class="rounded-lg aspect-[300/180] object-cover mb-2 lg:aspect-[360/200]"
             src="public/images/Rectangle992.webp"
             alt="фото" />
-          <h3 class="font-bold expanded leading-[1.1] text-xl pb-1.5">Как стать звездой вечеринки:</h3>
-          <p class="text-dark font-medium text-[10px] md:text-xs">29.02.2024</p>
+          <h3
+            class="font-bold expanded leading-[1.1] text-[clamp(20px,_6.2vw,_10000px)] md:text-[clamp(20px,_1.7vw,_10000px)] pb-1.5">
+            Как стать звездой вечеринки:
+          </h3>
+          <p class="text-dark font-medium text-[clamp(12px,_3.7vw,_10000px)] md:text-[clamp(12px,_1vw,_10000px)]">
+            29.02.2024
+          </p>
         </div>
       </div>
     </section>
@@ -420,53 +524,66 @@
       class="bg-gradient-to-b from-primary to-tertiary text-secondary pt-12 px-2.5 pb-14 text-center md:py-[90px] md:px-5 relative overflow-clip">
       <img class="absolute w-full top-4 left-0 z-0 md:hidden" src="public/images/Group_545.svg" alt="декор" />
       <img
-        class="absolute w-1/3 top-[100px] right-0 z-0 hidden md:block lg:w-1/5 lg:right-[4vw] xl:right-[calc((100vw-1200px)/2)]"
+        class="absolute w-1/3 top-[100px] right-0 z-0 hidden md:block lg:w-1/5 lg:right-[4vw] xl:right-[5vw]"
         src="public/images/Group_546.svg"
         alt="декор" />
       <img
-        class="absolute w-1/3 top-10 left-0 z-0 hidden md:block lg:w-1/5 lg:left-[8vw] xl:left-[calc((100vw-1200px)/2)]"
+        class="absolute w-1/3 top-10 left-0 z-0 hidden md:block lg:w-1/5 lg:left-[8vw] xl:left-[8vw]"
         src="public/images/Group_547.svg"
         alt="декор" />
       <h2
-        class="font-bold expanded leading-[0.93] text-[57px] break-words uppercase mb-[38px] md:leading-[1] md:text-[102px] md:mb-[74px] relative z-30">
-        Давайте <br />остава<br class="lg:hidden" />ться
+        data-aos="fade-up"
+        class="font-bold expanded leading-[0.93] text-[clamp(57px,_16vw,_10000px)] break-words uppercase mb-[38px] md:leading-[1] md:text-[clamp(102px,_8.5vw,_10000px)] md:mb-[74px] relative z-30">
+        Давай <br />остава<br class="lg:hidden" />ться
         <span class="block w-fit m-auto">
           на <br class="lg:hidden" />связи
           <img
-            class="absolute z-40 bottom-0 translate-y-3 left-1/2 -translate-x-1/2 w-[614зч] hidden md:block"
+            class="absolute z-40 bottom-0 translate-y-3 left-1/2 -translate-x-1/2 w-[clamp(702px,_58vw,_10000px)] hidden md:block"
             src="/public/images/Vector_3.svg"
             alt="декор"
         /></span>
       </h2>
       <div class="flex gap-3 md:gap-[73px] w-fit m-auto pb-[38px] md:pb-[63px] relative z-40">
-        <a class="font-medium text-xs flex gap-[5px] items-center md:text-xl md:gap-3" href="#">
-          <img class="w-3.5 h-3.5 md:w-6 md:h-6" src="public/icons/Telegram.svg" alt="иконка телеграм" />
+        <a
+          class="font-medium text-[clamp(12px,_3.7vw,_10000px)] flex gap-[5px] items-center md:text-[clamp(20px,_1.7vw,_10000px)] md:gap-3"
+          href="#">
+          <img
+            class="w-[clamp(14px,_3.9vw,_10000px)] h-[clamp(14px,_3.9vw,_10000px)] md:w-[clamp(24px,_2vw,_10000px)] md:h-[clamp(24px,_2vw,_10000px)]"
+            src="public/icons/Telegram.svg"
+            alt="иконка телеграм" />
           Telegram</a
         >
-        <a class="font-medium text-xs flex gap-[5px] items-center md:text-xl md:gap-3" href="#">
-          <img class="w-3.5 h-3.5 md:w-6 md:h-6" src="public/icons/Instagram.svg" alt="иконка инстаграм" />
+        <a
+          class="font-medium text-[clamp(12px,_3.7vw,_10000px)] flex gap-[5px] items-center md:text-[clamp(20px,_1.7vw,_10000px)] md:gap-3"
+          href="#">
+          <img
+            class="w-[clamp(14px,_3.9vw,_10000px)] h-[clamp(14px,_3.9vw,_10000px)] md:w-[clamp(24px,_2vw,_10000px)] md:h-[clamp(24px,_2vw,_10000px)]"
+            src="public/icons/Instagram.svg"
+            alt="иконка инстаграм" />
           Instagram</a
         >
       </div>
       <form
         class="flex flex-col gap-5 items-center px-5 w-full md:flex-row md:gap-10 m-auto md:w-fit md:px-0 relative z-40">
-        <p class="font-bold expanded text-base leading-[1] text-center md:text-left">
-          Подписывайтесь <br />на нашу рассылку
+        <p
+          class="font-bold expanded text-[clamp(16px,_5vw,_10000px)] md:text-[clamp(16px,_1.3vw,_10000px)] leading-[1] text-center md:text-left">
+          Подписывайся <br />на нашу рассылку
         </p>
         <input
-          class="bg-white text-tertiary font-medium text-base leading-[0.8] py-[15px] px-5 rounded-[10px] placeholder:text-tertiary placeholder:font-medium placeholder:text-base w-full md:max-w-[260px]"
+          class="bg-white text-tertiary font-medium text-[clamp(16px,_5vw,_10000px)] md:text-[clamp(16px,_1.3vw,_10000px)] leading-[0.8] py-[15px] px-5 rounded-[10px] placeholder:text-tertiary placeholder:font-medium placeholder:text-[clamp(16px,_5vw,_10000px)] md:placeholder:text-[clamp(16px,_1.3vw,_10000px)] w-full md:max-w-[clamp(260px,_21.7vw,_10000px)]"
           type="email"
           name="email"
           id="email"
-          placeholder="Ваша почта" />
+          placeholder="Твоя почта" />
         <button
-          class="text-primary border border-secondary bg-secondary font-bold expanded text-base leading-[0.8] py-[15px] px-5 rounded-full hover:bg-white hover:border-white active:text-secondary active:border-secondary active:bg-transparent w-fit grow-0"
+          class="text-primary font-bold bg-secondary border-secondary border text-[clamp(16px,_5vw,_10000px)] md:text-[clamp(16px,_1.3vw,_10000px)] leading-[0.8] py-[15px] px-5 rounded-full hover:bg-white hover:border-white active:text-secondary active:border-secondary active:bg-transparent w-fit grow-0"
           type="submit">
           Отправить
         </button>
       </form>
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="src/js/main.js"></script>
   </body>
 </html>

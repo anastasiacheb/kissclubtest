@@ -38,6 +38,8 @@ let accordionContent = document.querySelectorAll('.js_acc_content');
 let accordionIcon = document.querySelectorAll('.js_acc_icon');
 let accordionText = document.querySelector('.js_acc_text');
 let accordionInner = document.querySelectorAll('.js_acc_inner');
+let accordionImage = document.querySelectorAll('.js_acc_image');
+let accordionImageMain = document.querySelector('.js_acc_imagemain');
 
 for (let i = 0; i < accordion.length; i++) {
   if (i === 0) {
@@ -64,6 +66,7 @@ for (let i = 0; i < accordion.length; i++) {
     }
 
     accordionText.textContent = accordionInner[i].textContent;
+    accordionImageMain.src = accordionImage[i].src;
   });
 }
 
